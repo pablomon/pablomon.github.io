@@ -7,11 +7,13 @@ permalink: /about/
 <img class="col one right" src="/img/prof_pic.jpg">
 
 <br/>
-Hi! It is Pablo, from Madrid. Former engineer turned into game developer. 
+Hi! This is Pablo, from Madrid.
+<br>
+Former engineer turned into game developer. 
 
-I mainly code, but enjoy the art side quite a bit.
+I mainly code, but also enjoy the art side of videogames quite a bit.
 
-Currently looking for people to collaborate with.
+Currently looking for projects to take on and people to collaborate with.
 
 Let’s get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
 

@@ -1,0 +1,12 @@
+{
+"companyName": "Pablo Monteserin",
+"productName": "Night Talker",
+"dataUrl": "Webgl1.data.unityweb",
+"wasmCodeUrl": "Webgl1.wasm.code.unityweb",
+"wasmFrameworkUrl": "Webgl1.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#000000"
+}
