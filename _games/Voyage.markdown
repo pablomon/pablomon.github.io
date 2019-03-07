@@ -7,12 +7,14 @@ img: /img/voyage/voyageIcon.png
 
 Fast paced asteroids game. Easy to play but totally unforgiving.
 
-100% good quality spagetti code that makes adding content a great endevour. 
+100% spagetti code that makes adding content a great endevour.
+It got me acquainted with the app stores.
+
 <br/>
-Touch the left half of the screen to move left, touch the right have to move right. Try to complete the goals on each mission to move on to the next one.
+Touch the left half of the screen to move left, the right half moves it right. Try to complete the goals on each mission to move on to the next one.
 
 Features:
-- Pseudo randomly generated levels.
+- Randomly generated levels.
 - Goals system
 - Logaritmic difficulty
 - End of episodes cutscenes
@@ -25,4 +27,4 @@ Features:
 
 <br>
 
-Give it a try on <a href="https://play.google.com/store/apps/details?id=co.monux.voyage" target="_blank"> Android </a> or IOS.
+Give it a try on <a href="https://play.google.com/store/apps/details?id=co.monux.voyage" target="_blank"> Android. </a>
