@@ -19,7 +19,7 @@ $nav-height:                    56px;
 
 /* portfolio tinkering */
 $img_spacing: 5px; 
-$img_height: 100%;
+$img_height: 275px;
 $caption_font_size: 12px;
 $caption_color: #aaa;
 
@@ -196,8 +196,8 @@ pre {
  */ 
 
 .wrapper {
-    max-width: -webkit-calc(920px);
-    max-width:         calc(920px);
+    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
+    max-width:         calc(800px - (#{$horizontal-spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;
@@ -205,8 +205,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(920px);
-        max-width:         calc(920px);
+        max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit}));
+        max-width:         calc(800px - (#{$horizontal-spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }

@@ -2,7 +2,7 @@
 layout: post
 title: Space talker
 description: A space monologuer
-img: /img/spaceTalker/spaceTalkerProject.png
+img: /img/spaceTalker/spaceTalker1.png
 ---
 
 A tiny project I did to play around with some techniques using Scriptable Objects I learnt from watching some talks on the matter. <br>

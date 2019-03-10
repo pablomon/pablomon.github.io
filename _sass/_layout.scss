@@ -5,6 +5,7 @@
 .site-header {
 border-bottom: 1px solid $grey-color-light;
 background-color: #fff;
+opacity: 0.75;
 position:fixed;
 left:0px;
 top:0px;
@@ -24,20 +25,20 @@ color: $theme-color;
     }
 }
 .site-nav {
-font-size: 20px;
-text-align: center;
+float: right;
 line-height: $nav-height;
 .page-link{
 line-height: $base-line-height;
         // Gaps between nav items, but not on the first one
 &:not(:first-child) {
-margin-left: 15px;
+margin-left: 10px;
         }
     }
 @include media-query($on-palm) {
 position: fixed;
 top: 0px;
 right: 10px;
+text-align: right;
 &:hover .trigger {
 display: block;
 padding-bottom: 5px;
@@ -92,7 +93,7 @@ width:100%;
  * Pagination   **********************************************************
  */
 .pagination{
-max-width: 920px;
+max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
 text-align: center;
 width: 100%;
 position: fixed;
@@ -132,8 +133,7 @@ text-align: center;
  * Posts  **********************************************************
  */
 .post-header {
-    text-align: center;
-    margin-bottom: $vertical-spacing-unit;
+margin-bottom: $vertical-spacing-unit;
 }
 .post-title {
 font-size: 42px;
@@ -198,43 +198,43 @@ display: table;
 clear: both;
 }
 .project {
-    width: 33.33%;
-    float: left;
-    vertical-align: middle;
-    box-sizing: border-box;
-    padding: 10px;
-    @include media-query($on-palm) {
-        width: 100%;
-    }
+width: 33.33%;
+height: 250px;
+float: left;
+vertical-align: middle;
+box-sizing: border-box;
+padding: 10px;
 }
 .thumbnail{
 width: 100%;
-height: auto;
+height: 230px;
 overflow: hidden;
 }
 .thumbnail img{
-width: 100%;
+width: 500px;
 height: auto;
-margin-left: auto;
-margin-right: auto;
-display: block;
+position: relative;
+left: -25%;
+top: -5%;
 }
 .thumbnail a{
-  float: left;
-  position: relative;
-  width: 100%;
+float: left;
+position: relative;
+width: 100%;
+height: 230px;
 }
-.thumbnail a span {  
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  padding: 20%;
-  text-align: center; }
+.thumbnail a span {
+display: none;
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background: rgba(0,0,0,0.4);
+color: $grey-color-light;
+padding: 40px;
+text-align: center;
+}
 .thumbnail a:hover span {
 display: block;
 }
@@ -277,12 +277,4 @@ color: $caption_color;
 text-align: center;
 vertical-align: middle;
 font-size: $caption_font_size;
-}
-
-/** 
- * About page **********************************************************
-*/
-.aboutParagraph{
-    text-align: center;
-    line-height: 2;
 }

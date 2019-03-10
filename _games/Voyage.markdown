@@ -2,7 +2,7 @@
 layout: post
 title: Voyage
 description: My first completed proyect
-img: /img/voyage/voyageProject.png
+img: /img/voyage/voyageIcon.png
 ---
 
 Fast paced asteroids game. Easy to play but totally unforgiving.
