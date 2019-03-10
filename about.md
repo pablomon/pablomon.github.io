@@ -3,17 +3,17 @@ layout: page
 title: about me
 permalink: /about/
 ---
-
 <div class="aboutParagraph">
-	Hi! My name is Pablo.
+	Hi, my name is Pablo, from Madrid.
 	<br>
-	Former engineer turned game developer, Madrid based. 
+	Former engineer turned game developer.
 	<br>
 	I mainly code, but also enjoy the artistic side of videogames quite a bit.
 	<br>
 	Currently looking for projects to take on and people to collaborate with.
 	<br>
-	Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
+	<br>
+		Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
 </div>
 
 <br/>
