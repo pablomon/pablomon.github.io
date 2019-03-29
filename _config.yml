@@ -19,9 +19,9 @@ paginate_path: "/blog/page:num/"
 
 
 collections:
-  games:
+  projects:
     output: true
-    permalink: /games/:path/
+    permalink: /projects/:path/
 
 
 plugins: [jekyll-paginate]

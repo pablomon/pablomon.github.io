@@ -31,7 +31,7 @@ line-height: $nav-height;
 line-height: $base-line-height;
         // Gaps between nav items, but not on the first one
 &:not(:first-child) {
-margin-left: 15px;
+margin-left: 25px;
         }
     }
 @include media-query($on-palm) {
@@ -82,6 +82,7 @@ position:fixed;
 left:0px;
 bottom:0px;
 width:100%;
+text-align: center;
 }
 
 .site-footer p {
@@ -183,7 +184,6 @@ font-size: 16px;
     }
 }
 
-
 /** 
  * Portfolio grid **********************************************************
 */
@@ -226,14 +226,14 @@ display: block;
 }
 .thumbnail a span {  
   display: none;
-  position: absolute;
+  position: absolute;  
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.75);
   color: #fff;
-  padding: 20%;
+  padding: 30%;
   text-align: center; }
 .thumbnail a:hover span {
 display: block;
@@ -283,6 +283,8 @@ font-size: $caption_font_size;
  * About page **********************************************************
 */
 .aboutParagraph{
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
     line-height: 2;
 }
