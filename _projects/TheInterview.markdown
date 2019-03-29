@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The interview
+title: The Interview
 description:
 img: /img/theInterview/theInterviewProject.png
 ---
