@@ -6,7 +6,7 @@ permalink: /about/
 <div class="aboutParagraph">
 	Hi, my name is Pablo, from Madrid.
 	<br>
-	Former engineer turned game developer.
+	Former engineer turned video game developer.
 	<br>
 	I mainly code, but also enjoy the artistic side of videogames quite a bit.
 	<br>
