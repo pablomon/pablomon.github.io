@@ -5,16 +5,40 @@ description:
 img: /img/theInterview/theInterviewProject.png
 ---
 
-<img src="{{ site.baseurl }}/img/theInterview/theInterview1.png" alt="" title="screenshot"/>
+<img src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="screenshot"/>
 
-Idea original<br>
+The original idea revolved around all the tricks an interviewer could play on its interviewee during a long job interview. Lots of questions and answers.
+So "The interview" is it's prototype.<br>
 
-Descripción del resultado<br>
+The result is a short quizz where the player can choose ideas, rather than concrete answers, sort of defining the interviewee's ideosyncrasy.
+It all turned out rather morbid.<br>
 
-Inky: enlace y explicacion<br>
-Shader: explicacion y captura de ASE<br>
+Since the original idea implied dense dialog trees it was necessary to think of a tool for the job. I came across Inkle studio's <a href="https://www.inklestudios.com/ink/" target="_blank">ink</a>. It makes writting conversational games a breeze, thank you guys.
+Once you have your ink script ready you just go through it like so:
 
-Como se juega y objetivo<br>
+{% highlight c# %}  
+[SerializeField] private TextAsset inkScript;
+private Story story;
+...
+story = new Story(inkScript.text);
+...
+string text = string.Empty;
+while (story.canContinue)
+{            
+    text += story.Continue().Trim();
+    text += "\n";
+}
+{% endhighlight %}
 
 
-You can play it <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">here.</a>
+In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank">Amplify shader editor.</a> It allows to adjust the transition's progression with a float, and you can specify wether to ease in or out with another float.
+Looks like this:
+
+<br>
+<img src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
+
+There are 4 possible endings, depending on the attitud you have during your interview. ( There aren't good endings, just better ones )
+
+So put on you best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
+
+
