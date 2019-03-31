@@ -5,7 +5,9 @@ description:
 img: /img/theInterview/theInterviewProject.png
 ---
 
-<img src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="screenshot"/>
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="screenshot"/>
+</div>
 
 The original idea revolved around all the tricks an interviewer could play on its interviewee during a long job interview. Lots of questions and answers.
 So "The interview" is it's prototype.<br>
@@ -34,8 +36,9 @@ while (story.canContinue)
 In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank">Amplify shader editor.</a> It allows to adjust the transition's progression with a float, and you can specify wether to ease in or out with another float.
 Looks like this:
 
-<br>
-<img src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
+</div>
 
 There are 4 possible endings, depending on the attitud you have during your interview. ( There aren't good endings, just better ones )
 

@@ -5,8 +5,9 @@ description:
 img: /img/voyage/voyageProject.png
 ---
 <div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/voyage/voyage1.png" alt="" title="Voyage"/>
+	<img class="col three" src="{{ site.baseurl }}/img/voyage/voyage1.png" alt="" title="Voyage"/>
 </div>
+<br>
 
 Fast paced asteroids game. Easy to play but totally unforgiving.
 

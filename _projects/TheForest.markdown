@@ -5,12 +5,15 @@ description:
 img: /img/theForest/theForestProject.png
 ---
 
-<img src="{{ site.baseurl }}/img/theForest/theForest1.png" alt="" title="screenshot"/>
+<div class="img_row">
+	<img class="col three" src="{{ site.baseurl }}/img/theForest/theForest1.png" alt="" title="screenshot"/>
+</div>
+<br>
 
 When travelling around Perú with friends we fantazised of making a game inspired by all we where seeing and people we where meeting.<br>
 A year later I was asked to make a small RPG like project which should make use of particle effects and FMOD studio.
 
-As a result The forest is a moody nano story about a boy and his beloved friend pet in under the heavy rain.
+As a result The forest is a moody nano story about a boy and his beloved friend pet under the heavy rain.
 
 Footsteps are synced through Unity's animation events and the sound variation is defined within the FMOD project.<br>
 I found having your sound project independent from the main Unity project greatly improves your workflow.<br>

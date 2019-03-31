@@ -27,17 +27,19 @@ color: $theme-color;
 font-size: 20px;
 text-align: center;
 line-height: $nav-height;
+
 .page-link{
 line-height: $base-line-height;
         // Gaps between nav items, but not on the first one
 &:not(:first-child) {
-margin-left: 25px;
-        }
-    }
+  margin-left: 25px;
+  }
+}
+
 @include media-query($on-palm) {
-position: fixed;
+/*position: fixed;
 top: 0px;
-right: 10px;
+right: 10px;*/
 &:hover .trigger {
 display: block;
 padding-bottom: 5px;
