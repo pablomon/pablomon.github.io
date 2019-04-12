@@ -6,19 +6,18 @@ img: /img/7f/7fProject.png
 ---
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fMenu.png" alt="" title="Main menu"/>
-</div>
-<div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShipyard.png" alt="" title="Shipyard"/>
-</div>
-<div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fMission.png" alt="" title="Mission mockup"/>
 </div>
+<br>
 
-Topdown space shooter. A nomad civilization steps into the unknown to get hunted by an old foe. <br>
-Frenzy action, upgradable ships, retro graphics.
+Topdown 2D space shooter. 
+A nomad civilization steps into the unknown only to get hunted by an old foe.
+Frenzy action, upgradable ships, sleek graphics with a retro touch.
 
-The code got too complicated too quickly and probably needs to be started from scratch. <br>
-On hold for now.
+The code got too complicated too quickly and probably needs to be written from scratch. So I have to put it on hold for now, untill I find some help.
+
+Are you a programmer and know how to use Unity? Hit me up!
 
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShips.png" alt="" title="Ships"/>
