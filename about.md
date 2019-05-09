@@ -3,6 +3,11 @@ layout: page
 title: about me
 permalink: /about/
 ---
+
+<div class="aboutPhoto">
+	<img src="{{ site.baseurl }}/img/about/devPablomon.png" alt="" title="Me"/>
+</div>
+
 <div class="aboutParagraph">
 	Hi, my name is Pablo, from Madrid.
 	<br>

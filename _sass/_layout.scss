@@ -284,8 +284,11 @@ font-size: $caption_font_size;
 /** 
  * About page **********************************************************
 */
+.aboutPhoto{
+    text-align: center;
+}
 .aboutParagraph{
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
     text-align: center;
     line-height: 2;
