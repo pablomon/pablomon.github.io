@@ -15,10 +15,10 @@ permalink: /about/
 	<br>
 	I mainly code, but also enjoy the artistic side of videogames quite a bit.
 	<br>
-	Currently looking for projects to take on and people to collaborate with.
+	Always open to hear about cool projects.
 	<br>
 	<br>
-		Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
+	Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
 </div>
 
 <br/>
@@ -30,7 +30,7 @@ permalink: /about/
 	<a href="https://www.linkedin.com/in/pablo-monteser%C3%ADn-5b60b331/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 </span>
 
-<div class="col three caption">
+<div class="center">
 	Mail much preferred
 </div>
 

@@ -6,3 +6,5 @@ description: a welcome post
 ---
 
 Hi, Welcome to my site.
+Feel free to check my projects and contact me any time.
+Cheers.
