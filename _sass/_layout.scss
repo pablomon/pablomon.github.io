@@ -75,10 +75,10 @@ display: line;
  * Site footer  **********************************************************
  */
 .site-footer {
-border-top: 1px solid $grey-color-dark;
+border-top: 0px solid $grey-color-dark;
 font-size: 10px;
 background-color: $grey-color-dark;
-padding: 2px;
+padding: 0px;
 color: #aaa;
 position:fixed;
 left:0px;
@@ -111,7 +111,7 @@ color: $theme-color;
  * Page content   **********************************************************
  */
 .page-content {
-padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+padding: 70px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
 }
 .page-heading {
 font-size: 20px;
@@ -139,11 +139,11 @@ text-align: center;
     margin-bottom: $vertical-spacing-unit;
 }
 .post-title {
-font-size: 42px;
+font-size: 30px;
 letter-spacing: -1px;
 line-height: 1;
 @include media-query($on-laptop) {
-font-size: 36px;
+font-size: 24px;
     }
 }
 .post-content {
@@ -286,10 +286,11 @@ font-size: $caption_font_size;
 */
 .aboutPhoto{
     text-align: center;
+    margin-top: 50px;
 }
 .aboutParagraph{
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     text-align: center;
     line-height: 2;
 }

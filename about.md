@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="aboutPhoto">
-	<img src="{{ site.baseurl }}/img/about/devPablomon.png" alt="" title="Me"/>
+	<img src="{{ site.baseurl }}/img/about/devPablomon180.png" alt="" title="Me"/>
 </div>
 
 <div class="aboutParagraph">
@@ -21,9 +21,8 @@ permalink: /about/
 	Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
 </div>
 
-<br/>
 <hr/>
-<br/>
+
 <span class="contacticon center">
 	<a href="mailto:pablomonteserin@google.com"><i class="fa fa-envelope-square"></i></a>
 	<a href="https://github.com/pablomon" target="_blank"><i class="fa fa-github-square"></i></a>
