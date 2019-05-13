@@ -20,7 +20,13 @@ Features:
 - Goals system
 - Logaritmic difficulty
 - End of episodes cutscenes
-- Music by <a href="https://s31tech.org" target="_blank"> Section31 </a>
 
 
 Give it a try on <a href="https://play.google.com/store/apps/details?id=co.monux.voyage" target="_blank"> Android. </a>
+
+<div class="credits">
+Idea: Pablo Monteserín<br>
+Art: Pablo Monteserín<br>
+Code: Pablo Monteserin<br>
+Music: <a href="https://s31tech.org" target="_blank"> Section31 </a>
+</div>

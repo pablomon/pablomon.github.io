@@ -3,6 +3,18 @@
 	{
 		"selected_items":
 		[
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"Ma",
+				"margin\tproperty"
+			],
+			[
+				"ul",
+				"ul\tTag"
+			]
 		]
 	},
 	"buffers":
@@ -29,7 +41,19 @@
 			"file": "_sass/_layout.scss",
 			"settings":
 			{
-				"buffer_size": 4866,
+				"buffer_size": 4918,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "---\n# Only the main Sass file needs front matter (the dashes are enough)\n---\n@charset \"utf-8\";\n\n\n\n// Our variables\n$base-font-size:   16px;\n$small-font-size:  $base-font-size * 0.875;\n$base-line-height: 1.5;\n\n$spacing-unit:     30px;\n\n$text-color:       #111;\n$background-color: #fdfdfd;\n$brand-color:      #2a7ae2;\n\n$grey-color:       #828282;\n$grey-color-light: lighten($grey-color, 40%);\n$grey-color-dark:  darken($grey-color, 25%);\n\n$on-palm:          600px;\n$on-laptop:        800px;\n\n\n\n// Using media queries with like this:\n// @include media-query($palm) {\n//     .wrapper {\n//         padding-right: $spacing-unit / 2;\n//         padding-left: $spacing-unit / 2;\n//     }\n// }\n@mixin media-query($device) {\n    @media screen and (max-width: $device) {\n        @content;\n    }\n}\n\n\n\n// Import partials from `sass_dir` (defaults to `_sass`)\n@import\n        \"base\",\n        \"layout\",\n        \"syntax-highlighting\"\n;\n",
+			"file": "css/main.scss",
+			"file_size": 970,
+			"file_write_time": 132022180189506954,
+			"settings":
+			{
+				"buffer_size": 920,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -39,6 +63,23 @@
 			"settings":
 			{
 				"buffer_size": 3411,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_projects/7th fleet.markdown",
+			"settings":
+			{
+				"buffer_size": 1384,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "_projects/TheForest.markdown",
+			"settings":
+			{
+				"buffer_size": 1274,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -57,6 +98,14 @@
 		[
 			[
 				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
 				"Set Syntax: CSS"
 			],
 			[
@@ -66,10 +115,6 @@
 			[
 				"pac",
 				"Package Control: Install Package"
-			],
-			[
-				"css",
-				"Set Syntax: CSS"
 			],
 			[
 				"inse",
@@ -102,14 +147,16 @@
 	[
 		"/D/DEVELOPER/pablomon.github.io",
 		"/D/DEVELOPER/pablomon.github.io/_drafts",
-		"/D/DEVELOPER/pablomon.github.io/_posts",
+		"/D/DEVELOPER/pablomon.github.io/_includes",
+		"/D/DEVELOPER/pablomon.github.io/_layouts",
 		"/D/DEVELOPER/pablomon.github.io/_projects",
 		"/D/DEVELOPER/pablomon.github.io/_sass",
-		"/D/DEVELOPER/pablomon.github.io/css",
-		"/D/DEVELOPER/pablomon.github.io/img"
+		"/D/DEVELOPER/pablomon.github.io/css"
 	],
 	"file_history":
 	[
+		"/D/DEVELOPER/pablomon.github.io/css/main.scss",
+		"/D/DEVELOPER/pablomon.github.io/_sass/_base.scss",
 		"/d/DEVELOPER/pablomon.github.io/_drafts/a-new-draft.markdown",
 		"/C/Users/Pablo/AppData/Roaming/Sublime Text 3/Packages/Jekyll/Jekyll.sublime-settings",
 		"/D/DEVELOPER/Unity/shaders/Assets/Shaders/BarrelGrab.shader",
@@ -137,6 +184,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"helv",
 			"foot",
 			"post",
 			"vertical",
@@ -159,7 +207,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -188,7 +236,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -216,7 +264,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -225,34 +273,62 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4866,
+						"buffer_size": 4918,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4816,
-								4816
+								4624,
+								4624
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4756.8,
+						"translation.y": 4659.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "_sass/_base.scss",
+					"file": "css/main.scss",
 					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								115,
+								115
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_sass/_base.scss",
+					"semi_transient": true,
 					"settings":
 					{
 						"buffer_size": 3411,
@@ -262,21 +338,77 @@
 						"selection":
 						[
 							[
-								706,
-								710
+								220,
+								223
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 88.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "_projects/7th fleet.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 739.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "_projects/TheForest.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

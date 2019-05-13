@@ -11,6 +11,7 @@ img: /img/7f/7fProject.png
 </div>
 <br>
 
+
 Topdown 2D space shooter. 
 A nomad civilization steps into the unknown only to get hunted by an old foe.
 Frenzy action, upgradable ships, sleek graphics with a retro touch.
@@ -36,4 +37,10 @@ Are you a programmer and know how to use Unity? Hit me up!
 </div>
 <div class="col three caption">
 	Ship controls implemented
+</div>
+
+<div class="credits">
+Idea: Pablo Monteserín<br>
+Art: Pablo Monteserín<br>
+Code: Pablo Monteserin<br>
 </div>
