@@ -40,7 +40,7 @@ Looks like this:
 	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
 </div>
 
-There are 4 possible endings, depending on the attitud you have during your interview. ( There aren't good endings, just better ones )
+There are 4 possible endings, depending on your attitud during the interview ( There aren't good endings, just better ones ).
 
 So put on you best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
 
