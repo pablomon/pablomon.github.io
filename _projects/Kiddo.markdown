@@ -5,13 +5,12 @@ description: WIP
 img: /img/kiddo/kiddoProject.png
 ---
 <div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/kiddo/kiddo1.png" alt="" title="A normal day"/>
-	<img class="col three" src="{{ site.baseurl }}/img/kiddo/kiddo2.png" alt="" title="Shipyard"/>
-	<img class="col three" src="{{ site.baseurl }}/img/kiddo/kiddo3.png" alt="" title="Mission mockup"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddoProject.png" alt="" title="A normal day"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo2.png" alt="" title="Class of 82"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo3.png" alt="" title="Wondering around the house"/>
 </div>
 <br>
 
-Plot:
 The story describes an alternate present in which most people has lost interest in
 human relations.
 People now spend most of their time on their own and they are provided and kept
@@ -22,7 +21,6 @@ However not everyone agrees with this lifestyle and a small movement will get se
 Everything is calm until one day Kiddo receives a package that will make him get involved and question himself and the life he is leading.
 
 <a href="{{ site.baseurl }}/webgl/miniKiddo/index.html" target="_blank">Take a look</a>.
-
 
 <div class="credits">
 Idea: Isra Paez & me<br>

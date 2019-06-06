@@ -6,7 +6,7 @@ img: /img/theInterview/theInterviewProject.png
 ---
 
 <div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="screenshot"/>
+	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="Header"/>
 </div>
 
 The original idea revolved around all the tricks an interviewer could play on its interviewee during a long job interview. Lots of questions and answers.
