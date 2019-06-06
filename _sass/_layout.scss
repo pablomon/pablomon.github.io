@@ -6,11 +6,7 @@
 border-bottom: 1px solid $grey-color-light;
 background-color: #fff;
 position:fixed;
-left:0px;
-top:0px;
-height:56px;
 width:100%;
-z-index: 50;
 }
 
 .site-title {
@@ -248,7 +244,7 @@ background: $theme-color;
 }
 .img_row{
 height: $img_height;
-width: 100%;
+display:block;
 overflow: hidden;
 box-sizing:border-box;
 padding: $img_spacing;
