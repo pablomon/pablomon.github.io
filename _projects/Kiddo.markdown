@@ -5,7 +5,7 @@ description: WIP
 img: /img/kiddo/kiddoProject.png
 ---
 <div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddoProject.png" alt="" title="A normal day"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo1.png" alt="" title="A normal day"/>
 	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo2.png" alt="" title="Class of 82"/>
 	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo3.png" alt="" title="Wondering around the house"/>
 </div>
