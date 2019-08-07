@@ -26,7 +26,7 @@ Sounds from freesound.org.
 <a href="{{ site.baseurl }}/webgl/theForest/index.html" target="_blank">You can play it here.</a>
 
 <div class="credits">
-Idea: Pablo Monteserín<br>
-Art: Pablo Monteserín & 3rd Party<br>
-Code: Pablo Monteserin<br>
+Idea: Me<br>
+Art: Me & 3rd Party<br>
+Code: Me<br>
 </div>

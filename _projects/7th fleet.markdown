@@ -40,7 +40,7 @@ Are you a programmer and know how to use Unity? Hit me up!
 </div>
 
 <div class="credits">
-Idea: Pablo Monteserín<br>
-Art: Pablo Monteserín<br>
-Code: Pablo Monteserin<br>
+Idea: Me<br>
+Art: Me<br>
+Code: Me<br>
 </div>

@@ -282,6 +282,12 @@ font-size: $caption_font_size;
     font-size: 12px;
     line-height: 1.2;
 }
+
+.gameLink {
+    margin-top: 40px;
+    text-align: center;
+    font-size: $base-font-size * 1.5;
+}
 /** 
  * About page **********************************************************
 */

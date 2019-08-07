@@ -25,8 +25,8 @@ Features:
 Give it a try on <a href="https://play.google.com/store/apps/details?id=co.monux.voyage" target="_blank"> Android. </a>
 
 <div class="credits">
-Idea: Pablo Monteserín<br>
-Art: Pablo Monteserín<br>
-Code: Pablo Monteserin<br>
+Idea: Me<br>
+Art: Me<br>
+Code: Me<br>
 Music: <a href="https://s31tech.org" target="_blank"> Section31 </a>
 </div>

@@ -45,8 +45,8 @@ There are 4 possible endings, depending on your attitud during the interview ( T
 So put on you best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
 
 <div class="credits">
-Idea: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a><br>
-Art: Pablo Monteserín<br>
-Code: Pablo Monteserin<br>
+Idea: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a> & me<br>
+Art: Me<br>
+Code: Me<br>
 </div>
 

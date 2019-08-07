@@ -28,7 +28,7 @@ In order to make the pilot convey some feelings, the direction it looks towards 
 <a href="{{ site.baseurl }}/webgl/spaceTalker/index.html" target="_blank">Take a look</a>.
 
 <div class="credits">
-Idea: Pablo Monteserín<br>
-Art: Pablo Monteserín<br>
-Code: Pablo Monteserin<br>
+Idea: Me<br>
+Art: Me<br>
+Code: Me<br>
 </div>
