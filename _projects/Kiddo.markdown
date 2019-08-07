@@ -33,7 +33,7 @@ Follow its development closely on <a href="https://www.instagram.com/kiddogame/"
 <div class="gameLink">
 <a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
 	Take a look!
-	<img class="kiddoGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Demo released!">
+	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Demo released!">
 </a>
 </div>
 
@@ -42,13 +42,3 @@ Idea: Isra Paez & me<br>
 Art: Isra Paez<br>
 Code: me<br>
 </div>
-
-<style>
-.kiddoGif {
-  width: 30%;
-  align-content: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
