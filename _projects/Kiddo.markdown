@@ -6,9 +6,9 @@ img: /img/kiddo/kiddoProject.png
 ---
 
 <div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddo1.png" alt="" title="Wondering around the house"/>
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddoMetro.png" alt="" title="Metro animation"/>
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddoFridge.png" alt="" title="Inside the fridge"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddosofa.png" alt="" title="Wondering around the house"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddometro.png" alt="" title="Metro animation"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/kiddofridge.png" alt="" title="Inside the fridge"/>
 </div>
 <br>
 
