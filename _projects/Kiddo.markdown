@@ -33,7 +33,7 @@ Follow its development closely on <a href="https://www.instagram.com/kiddogame/"
 <div class="gameLink">
 <a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
 	Take a look!
-	<img class="kiddoGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Demo released!"/>
+	<img class="kiddoGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Demo released!">
 </a>
 </div>
 
