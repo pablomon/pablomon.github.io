@@ -6,7 +6,7 @@ img: /img/kiddo/kiddoProject.png
 ---
 
 <div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/sofa.png" alt="" title="Wondering around the house"/>
+	<img class="col one" src="{{ site.baseurl }}/img/kiddo/sofa.png" alt="" title="Killing time"/>
 	<img class="col one" src="{{ site.baseurl }}/img/kiddo/metro.png" alt="" title="Metro animation"/>
 	<img class="col one" src="{{ site.baseurl }}/img/kiddo/fridge.png" alt="" title="Inside the fridge"/>
 </div>
@@ -33,7 +33,6 @@ Follow its development closely on <a href="https://www.instagram.com/kiddogame/"
 <div class="gameLink">
 <a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
 	Take a look!
-	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Demo released!">
 </a>
 </div>
 
