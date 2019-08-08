@@ -6,7 +6,7 @@ description: Kiddo demo is online!
 ---
 
 After so much more time we thought we needed KIDDO demo is already 
-<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank"> here!. </a>
+<a href="{{ site.baseurl }}/projects/Kiddo/" target="_blank"> here!. </a>
 <br>
 Nothing there is final and actually we expect things to change a lot, but you can get a feeling about the main character and the overall tone of the game.
 <br>
