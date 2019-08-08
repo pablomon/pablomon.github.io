@@ -13,5 +13,5 @@ Nothing there is final and actually we expect things to change a lot, but you ca
 <a href="https://paezpaez.com/"> Paez </a> and I are super excited about this. Comments are welcome.
 <br>
 <div class="img_row">
-	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/undress.gif" alt="" title="Shader"/>
+	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
 </div>
