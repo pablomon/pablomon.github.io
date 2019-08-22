@@ -24,11 +24,12 @@ Key points:
 <h4>Plot</h4>
 The story describes an alternate present in which most people have lost interest in human relationships.
 People now spend most of their time on their own and they are provided for and kept undisturbed by an artificial intelligence whose purpose is to maximize the amount of time people spend online. While it mainly offers online services, it also takes care of other aspects of life like transportation, security, scrutiny of elections, etc. There is no real need to go out for food, clothes, or electronics, so one can spend weeks inside without unwelcome interactions. However, not everyone agrees with this lifestyle and a small movement will be set in motion. Everything is calm until one day Kiddo receives a package that will involve him in the movement and make him question himself and the life he is leading.
+
 <br>
 <h4>Current State</h4>
 The game is currently under heavy development and we are actively looking for funding.
 <br>
-Follow its development closely on <a href="https://www.instagram.com/kiddogame/"> twitter. <a/>
+Follow its development closely on <a href="https://www.instagram.com/kiddogame/"> Instagram. <a/>
 
 <div class="gameLink">
 <a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
