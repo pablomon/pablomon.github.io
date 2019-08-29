@@ -288,8 +288,18 @@ font-size: $caption_font_size;
     text-align: center;
     font-size: $base-font-size * 1.5;
 }
+
+.button {
+ background-color: #FF7D01;
+ border-radius: 12px;
+ color: #2B035B;
+ padding: 10px 15px;
+ display: inline-block;
+ margin: 4px 2px;
+}
+
 .centeredGif {
-  width: 30%;
+  width: 15%;
   align-content: center;
   display: block;
   margin-left: auto;
