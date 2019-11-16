@@ -12,11 +12,43 @@ img: /img/kiddo/kiddoProject.png
 </div>
 <br>
 
-KIDDO is a hand drawn click&point adventure video game set in a dystopian present where the population lives comfortably isolated in their apartments and relies upon a powerful artificial intelligence to provide all its needs.
+<div>
+	<p>
+	<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
+	KIDDO</a>
+	is a hand drawn point&click adventure video game set in a dystopian present where the population lives comfortably isolated in their apartments and relies upon a powerful artificial intelligence to provide all its needs.
+	</p>
 
-The game is currently under heavy development and we are actively looking for funding.
+	<p>The game is currently under heavy development and we are actively looking for funding.</p>
 
-Follow its development closely on <a href="https://www.instagram.com/kiddogame/"> Instagram. <a/>
+	<p>
+		Follow its development closely on 
+		<a href="https://www.instagram.com/kiddothegame/"> Instagram </a>
+		and
+		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
+	</p>
+</div>
+<hr>
+<br>
+
+<div>
+	<p>
+	<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
+	KIDDO</a>
+	es un juego de aventura point&click dibujado a mano ambientado en un presente distópico donde la población vive confortablemente aislada en sus apartamentos y depende de una poderosa inteligencia artificial que se encarga de todas sus necesidades.
+	</p>
+
+	<p>El juego esta actualmente en desarrollo y estamos buscando financiación.</p>
+
+	<p>
+		Sigue el desarrollo de cerca en 
+		<a href="https://www.instagram.com/kiddothegame/"> Instagram </a>
+		y
+		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
+	</p>
+</div>
+<hr>
+
 
 <div class="gameLink">
 	<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank" class="button">

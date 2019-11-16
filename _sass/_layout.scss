@@ -277,6 +277,18 @@ vertical-align: middle;
 font-size: $caption_font_size;
 }
 
+
+
+/* Create two equal columns that sits next to each other */
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+
 .credits {
     margin-top: 50px;
     font-size: 12px;
@@ -286,7 +298,8 @@ font-size: $caption_font_size;
 .gameLink {
     margin-top: 40px;
     text-align: center;
-    font-size: $base-font-size * 1.5;
+    font-weight: bold;
+    
 }
 
 .button {
@@ -299,7 +312,7 @@ font-size: $caption_font_size;
 }
 
 .centeredGif {
-  width: 15%;
+  width: 200px;
   align-content: center;
   display: block;
   margin-left: auto;

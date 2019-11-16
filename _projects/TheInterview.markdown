@@ -39,10 +39,10 @@ Looks like this:
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
 </div>
+<br>
+There are <i>4 possible endings</i>, depending on your attitud during the interview ( Spoiler, there aren't good endings ).
 
-There are 4 possible endings, depending on your attitud during the interview ( There aren't good endings, just better ones ).
-
-So put on you best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
+So put on you best shoes and <a class="gameLink" href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
 
 <div class="credits">
 Idea: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a> & me<br>

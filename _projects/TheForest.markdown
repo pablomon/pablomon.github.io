@@ -23,7 +23,7 @@ For color gadient it utilizes Unity's post processing stack.
 3d models are third party assets from the Unity Asset store.<br>
 Sounds from freesound.org.
 
-<a href="{{ site.baseurl }}/webgl/theForest/index.html" target="_blank">You can play it here.</a>
+<a class="gameLink" href="{{ site.baseurl }}/webgl/theForest/index.html" target="_blank">You can play it here.</a>
 
 <div class="credits">
 Idea: Me<br>
