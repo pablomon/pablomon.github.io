@@ -28,7 +28,5 @@ In order to make the pilot convey some feelings, the direction it looks towards 
 <a class="gameLink" href="{{ site.baseurl }}/webgl/spaceTalker/index.html" target="_blank">Take a look</a>.
 
 <div class="credits">
-Idea: Me<br>
-Art: Me<br>
-Code: Me<br>
+Solo project.
 </div>

@@ -10,8 +10,7 @@ img: /img/theForest/theForestProject.png
 </div>
 <br>
 
-When travelling around Perú with friends we fantazised of making a game inspired by all we where seeing and people we where meeting. Then a year later I was asked to make a small RPG like project which should make use of particle effects and FMOD studio.
-So I took some of those ideas to the project and this is what came out of it.
+Short RPG like game inspired on a trip to Perú. It makes use of particle effects and FMOD studio.
 
 <i>The forest is a moody nano story about a boy and his beloved friend pet under the heavy rain.</i>
 
@@ -26,7 +25,5 @@ Sounds from freesound.org.
 <a class="gameLink" href="{{ site.baseurl }}/webgl/theForest/index.html" target="_blank">You can play it here.</a>
 
 <div class="credits">
-Idea: Me<br>
-Art: Me & 3rd Party<br>
-Code: Me<br>
+Solo project using 3rd party 3d assets.
 </div>

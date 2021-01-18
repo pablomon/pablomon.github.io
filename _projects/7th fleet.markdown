@@ -4,6 +4,7 @@ title: 7th fleet
 description: WIP
 img: /img/7f/7fProject.png
 ---
+
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fMenu.png" alt="" title="Main menu"/>
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShipyard.png" alt="" title="Shipyard"/>
@@ -11,14 +12,6 @@ img: /img/7f/7fProject.png
 </div>
 <br>
 
-
-Topdown 2D space shooter. 
-A nomad civilization steps into the unknown only to get hunted by an old foe.
-Frenzy action, upgradable ships, sleek graphics with a retro touch.
-
-The code got too complicated too quickly and probably needs to be written from scratch. So I have to put it on hold for now, untill I find some help.
-
-Are you a programmer and know how to use Unity? Hit me up!
 
 <div class="img_row">
 	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShips.png" alt="" title="Ships"/>
@@ -39,8 +32,13 @@ Are you a programmer and know how to use Unity? Hit me up!
 	Ship controls implemented
 </div>
 
+Topdown 2D space shooter.<br>
+<i>A nomad civilization steps into the unknown only to get hunted by an old foe.</i><br>
+Frenzy action, upgradable ships, sleek graphics with a retro touch.
+
+The project is on hold.
+
+
 <div class="credits">
-Idea: Me<br>
-Art: Me<br>
-Code: Me<br>
+Solo project.
 </div>

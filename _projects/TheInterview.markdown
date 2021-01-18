@@ -9,10 +9,10 @@ img: /img/theInterview/theInterviewProject.png
 	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="Header"/>
 </div>
 
-The original idea revolved around all the tricks an interviewer could play on its interviewee during a long job interview. Lots of questions and answers.
-So "The interview" is it's prototype.<br>
+<br>
+<i>The interview is a quizz game where the player can choose ideas, rather than concrete answers, sort of defining the players ideosyncrasy.</i><br>
+The original idea revolved around all the tricks an interviewer could play on its interviewee during a job interview.<br>
 
-The result is a short quizz where the player can choose ideas, rather than concrete answers, sort of defining the interviewee's ideosyncrasy.
 It all turned out rather morbid.<br>
 
 Since the original idea implied dense dialog trees it was necessary to think of a tool for the job. I came across Inkle studio's <a href="https://www.inklestudios.com/ink/" target="_blank">ink</a>. It makes writting conversational games a breeze, thank you guys.
@@ -46,7 +46,5 @@ So put on you best shoes and <a class="gameLink" href="{{ site.baseurl }}/webgl/
 
 <div class="credits">
 Idea: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a> & me<br>
-Art: Me<br>
-Code: Me<br>
 </div>
 
