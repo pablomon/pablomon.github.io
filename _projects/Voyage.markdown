@@ -22,7 +22,7 @@ Features:
 - End of episodes cutscenes
 
 Use "a" and "d" to steer the ship. Left mouse click to navigate through the menus.<br>
-<a class="gameLink" href="{{ site.baseurl }}/webgl/voyage/index.html" target="_blank"> Give it a try. </a>
+<a class="gameLink" href="{{ site.baseurl }}/webgl/Voyage/index.html" target="_blank"> Give it a try. </a>
 
 <div class="credits">
 Music: <a href="https://s31tech.org" target="_blank"> Section31 </a>
