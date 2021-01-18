@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | The interview</title>
-  </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" style="width: 450px; height: 800px; background: #231F20"></canvas>
-    <script src="Build/builds.loader.js"></script>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
     <script>
-      createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/builds.data",
-        frameworkUrl: "Build/builds.framework.js",
-        codeUrl: "Build/builds.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "pablomon",
-        productName: "The interview",
-        productVersion: "1.0",
-      });
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Builds.json", {onProgress: UnityProgress});
     </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 450px; height: 800px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="title">The interview</div>
+      </div>
+    </div>
   </body>
 </html>
