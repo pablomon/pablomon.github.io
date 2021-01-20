@@ -14,7 +14,7 @@ img: /img/kiddo/kiddoProject.png
 
 <div>
 	<p>
-	<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank">
+	<a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank">
 	KIDDO</a>
 	is a hand drawn point&click adventure video game set in a dystopian present where the population lives comfortably isolated in their apartments and relies upon a powerful artificial intelligence to provide all its needs.
 	</p>
@@ -51,7 +51,7 @@ img: /img/kiddo/kiddoProject.png
 
 
 <div class="gameLink">
-	<a href="{{ site.baseurl }}/webgl/Kiddo/index.html" target="_blank" class="button">
+	<a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank" class="button">
 	Take a look!</a>
 	<div class="img_row">
 	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
