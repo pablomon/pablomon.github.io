@@ -14,7 +14,7 @@ img: /img/kiddo/kiddoProject.png
 
 <div>
 	<p>
-	KIDDO is a hand drawn point&click adventure game set in a dystopian present where the population lives comfortably isolated in their apartments and relies upon a powerful artificial intelligence to provide all its needs.
+	KIDDO is a hand drawn point&click adventure game set in a dystopian present where the population lives comfortably isolated in their apartments and have gave in relies upon a powerful artificial intelligence to provide all its needs.
 	</p>
 
 	<p>The game is currently under heavy development and we are actively looking for funding.</p>
@@ -50,8 +50,6 @@ img: /img/kiddo/kiddoProject.png
 	</p>
 </div>
 <hr>
-
-<a href="{{ site.baseurl }}/KIDDO builds/KIDDO demoK.zip" download> PC demo version </a>.
 
 <div class="gameLink">
 	<a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank" class="button">
