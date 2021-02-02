@@ -51,6 +51,8 @@ img: /img/kiddo/kiddoProject.png
 </div>
 <hr>
 
+<a href="{{ site.baseurl }}/docs/kiddo/BUDGET_INDIE_FUND_KIDDO.pdf" target="_blank" class="button">
+
 <div class="gameLink">
 	<a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank" class="button">
 	Check the demo on your browser!</a><br><br>
