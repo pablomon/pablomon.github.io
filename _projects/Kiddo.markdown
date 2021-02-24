@@ -60,7 +60,6 @@ img: /img/kiddo/kiddoProject.png
 </div>
 
 <div class="credits">
-	Idea: Isra Paez & me<br>
 	Art: Isra Paez<br>
 	Code: me<br>
 </div>
