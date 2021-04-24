@@ -26,7 +26,7 @@ img: /img/kiddo/kiddoProject.png
 		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
 	</p>
 	<p>
-		Or check the <a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank"> oficial webpage </a>.
+		Or check the <a href="https://kiddothegame.com/" target="_blank"> oficial webpage </a>.
 	</p>
 </div>
 <hr>
@@ -52,14 +52,13 @@ img: /img/kiddo/kiddoProject.png
 <hr>
 
 <div class="gameLink">
-	<a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank" class="button">
-	Check the demo on your browser!</a><br><br>
-	<a href="{{ site.baseurl }}/KIDDO builds/KIDDO demo.zip" download>Or try on Windows</a>
+	<a href="https://grasita-games.itch.io/kiddo" target="_blank" class="button">
+	Download the demo from itch.io!</a><br><br>
+<!-- 	<a href="{{ site.baseurl }}/KIDDO builds/KIDDO demo.zip" download>Or try on Windows</a> -->
 	<div class="img_row">
 	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
 </div>
 
 <div class="credits">
 	Art: Isra Paez<br>
-	Code: me<br>
 </div>
