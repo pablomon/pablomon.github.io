@@ -32,28 +32,9 @@ img: /img/kiddo/kiddoProject.png
 <hr>
 <br>
 
-<div>
-	<p>
-	KIDDO es un juego de aventura point&click dibujado a mano ambientado en un presente distópico donde la población vive confortablemente aislada en sus apartamentos y ha cedido su independencia a una poderosa inteligencia artificial que se encarga de todas sus necesidades.
-	</p>
-
-	<p>El juego esta actualmente en desarrollo y estamos buscando financiación.</p>
-
-	<p>
-		Sigue el desarrollo de cerca en 
-		<a href="https://www.instagram.com/kiddothegame/"> Instagram </a>
-		y
-		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
-		</p>
-		<p>
-		O pásate por la <a href="https://kiddothegame.com/"> página oficial </a>.
-	</p>
-</div>
-<hr>
-
 <div class="gameLink">
-	<a href="https://grasita-games.itch.io/kiddo" target="_blank" class="button">
-	Download the demo from itch.io!</a><br><br>
+	<a href="https://kiddothegame.com" target="_blank" class="button">
+	Official KIDDO page!</a><br><br>
 
 	<div class="img_row">
 	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
