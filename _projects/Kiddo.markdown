@@ -46,7 +46,7 @@ img: /img/kiddo/kiddoProject.png
 		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
 		</p>
 		<p>
-		O pásate por la <a href="{{ site.baseurl }}/webgl/kiddo/index.html" target="_blank"> página oficial </a>.
+		O pásate por la <a href="https://kiddothegame.com/"> página oficial </a>.
 	</p>
 </div>
 <hr>
@@ -54,7 +54,7 @@ img: /img/kiddo/kiddoProject.png
 <div class="gameLink">
 	<a href="https://grasita-games.itch.io/kiddo" target="_blank" class="button">
 	Download the demo from itch.io!</a><br><br>
-<!-- 	<a href="{{ site.baseurl }}/KIDDO builds/KIDDO demo.zip" download>Or try on Windows</a> -->
+
 	<div class="img_row">
 	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
 </div>
