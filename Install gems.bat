@@ -1,0 +1,1 @@
+gem install jekyll bundler && gem install jekyll-paginate && gem install webrick && gem install sdbm && gem install net-telnet && gem install xmlrpc && exit

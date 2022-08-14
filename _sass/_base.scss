@@ -137,6 +137,9 @@ a {
     }
 }
 
+article {
+	text-align: center;
+}
 article a {
     color: $theme-color;
     /*font-weight: 100;*/
@@ -225,6 +228,3 @@ pre {
         clear: both;
     }
 }
-
-
-
