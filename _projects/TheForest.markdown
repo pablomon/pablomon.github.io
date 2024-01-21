@@ -25,5 +25,6 @@ Sounds from freesound.org.
 <a class="gameLink" href="{{ site.baseurl }}/webgl/theForest/index.html" target="_blank">You can play it here.</a>
 
 <div class="credits">
-Solo project using 3rd party 3d assets.
+	- Collaborators - <br> 
+	3rd party 3d assets.
 </div>

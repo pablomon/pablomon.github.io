@@ -20,7 +20,4 @@ img: /img/poesiatPong/project.png
   	</p>
 	</div>
 </div>
-<div class="credits">
-Solo project
-</div>
 

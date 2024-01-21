@@ -44,7 +44,4 @@ There are <i>4 possible endings</i>, depending on your attitud during the interv
 
 So put on you best shoes and <a class="gameLink" href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
 
-<div class="credits">
-Original idea: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a><br>
-</div>
 

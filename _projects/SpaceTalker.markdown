@@ -26,7 +26,3 @@ The art style is heavily inspired on the works of Pedro Medeiros, whom you can f
 In order to make the pilot convey some feelings, the direction it looks towards varies acording to the emotion the dialog carries. Internal dialog down left, visual imagination up left, visual memory up right.
 
 <a class="gameLink" href="{{ site.baseurl }}/webgl/spaceTalker/index.html" target="_blank">Take a look</a>.
-
-<div class="credits">
-Solo project.
-</div>

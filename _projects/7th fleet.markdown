@@ -40,5 +40,5 @@ The project is on hold.
 
 
 <div class="credits">
-Solo project.
+
 </div>

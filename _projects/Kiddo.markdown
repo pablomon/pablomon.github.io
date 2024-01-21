@@ -41,5 +41,7 @@ img: /img/kiddo/kiddoProject.png
 </div>
 
 <div class="credits">
-	Art: Isra Paez<br>
+	- Collaborators - <br> 
+Art: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a><br>
+Music: <a href="https://kwintenmordijck.com/" target="_blank"> Kwinten Mordijck</a><br>
 </div>
