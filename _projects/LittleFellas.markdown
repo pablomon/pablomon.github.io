@@ -2,7 +2,7 @@
 layout: post
 title: Little Fellas
 description:
-img: /img/littleFellas/LFProject.png
+img: /img/littleFellas/lfproject.png
 ---
 
 <br>
