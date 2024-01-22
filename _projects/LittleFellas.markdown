@@ -9,7 +9,7 @@ img: /img/littleFellas/lf.png
 Wellcome to Little Fellas!<br><br> A game about friendly creatures that need you to snug them together tightly.<br>
 
 <div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/littleFellas/lfpuzzlecomplete.gif" alt="" title="screenshot"/>
+	<img class="col three" src="{{ site.baseurl }}/img/littleFellas/lfp.gif" alt="" title="screenshot"/>
 </div>
 
 <br>
