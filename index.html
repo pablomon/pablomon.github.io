@@ -1,19 +1,12 @@
----
-layout: default
----
-
-<div class="header-bar">
-</div>
-
-
-<ul class="post-list">
-    {% for post in paginator.posts %}
-      <li>
-        <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-        <p>{{ post.description }}</p>
-        <br/>
-        <hr/>
-      </li>
-    {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redireccionando...</title>
+    <script>
+        window.location.href = "/projects";
+    </script>
+</head>
+<body>
+    <p>Let's take a look at my projects...</p>
+</body>
+</html>
