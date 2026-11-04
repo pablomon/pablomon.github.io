@@ -1,15 +1,48 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post{% if page.collection == 'projects' %} project-page{% endif %}">
 
   <header class="post-header">
+    {% if page.genre or page.status %}
+    <p class="project-meta">
+      {% if page.genre %}<span>{{ page.genre }}</span>{% endif %}
+      {% if page.status %}<span class="project-status status-{{ page.status | slugify }}">{{ page.status }}</span>{% endif %}
+    </p>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y — %H:%M" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% if page.tagline %}<p class="project-tagline">{{ page.tagline }}</p>{% endif %}
+    {% if page.collection == 'posts' %}
+    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% endif %}
+    {% if page.play or page.website %}
+    <p class="project-actions">
+      {% if page.play %}<a class="cta" href="{{ page.play | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-play" aria-hidden="true"></i> Play in browser</a>{% endif %}
+      {% if page.website %}<a class="cta{% if page.play %} cta-secondary{% endif %}" href="{{ page.website }}" target="_blank" rel="noopener">Official website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>{% endif %}
+    </p>
+    {% endif %}
   </header>
+
+  {% if page.hero %}
+  <img class="project-hero" src="{{ page.hero | relative_url }}" alt="{{ page.title }}"/>
+  {% endif %}
 
   <article class="post-content">
     {{ content }}
   </article>
+
+  {% if page.credits %}
+  <section class="project-credits">
+    <h2>Credits</h2>
+    <dl>
+      {% for credit in page.credits %}
+      <div>
+        <dt>{{ credit.role }}</dt>
+        <dd>{% if credit.url %}<a href="{{ credit.url }}" target="_blank" rel="noopener">{{ credit.name }}</a>{% else %}{{ credit.name }}{% endif %}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
 
 </div>

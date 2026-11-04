@@ -3,7 +3,7 @@ title: Pablo Monteserín
 email: pablomonteserin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Pablomon's portfolio
-baseurl:  /
+baseurl: ""
 url:  # the base hostname & protocol for your site
 twitter_username: twitter_username
 github_username:  pablomon

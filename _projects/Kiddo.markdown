@@ -3,45 +3,38 @@ layout: post
 title: Kiddo
 description: WIP
 img: /img/kiddo/kiddoProject.png
+accent: "#ae6ef7"  # neon colour for the games grid, taken from the cover
+genre: Point & click adventure
+status: Demo released
+hero: /img/kiddo/tiredOfLife.png
+website: https://kiddothegame.com
+credits:
+  - role: Art
+    name: Israel Paez
+    url: https://paezpaez.com
+  - role: Music
+    name: Kwinten Mordijck
+    url: https://kwintenmordijck.com/
 ---
 
-<div class="img_row">
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/sofa.png" alt="" title="Killing time"/>
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/tiredOfLife.png" alt="" title="Cover"/>
-	<img class="col one" src="{{ site.baseurl }}/img/kiddo/fridge.png" alt="" title="Inside the fridge"/>
-</div>
-<br>
-
-<div>
-	<p>
-	KIDDO is a hand drawn point&click adventure game set in a dystopian present where the population lives comfortably isolated in their apartments and have gave in relies upon a powerful artificial intelligence to provide all its needs.
-	</p>
-
+<div class="prose">
+	<p>KIDDO is a hand drawn point &amp; click adventure game set in a dystopian present, where the population lives comfortably isolated in their apartments, relying on a powerful artificial intelligence to provide for all their needs.</p>
 	<p>The game is currently under heavy development and we are actively looking for funding.</p>
-
-	<p>
-		Follow its development closely on 
-		<a href="https://www.instagram.com/kiddothegame/"> Instagram </a>
-		and
-		<a href="https://www.facebook.com/kiddothegame/"> Facebook. </a>
-	</p>
-	<p>
-		Or check the <a href="https://kiddothegame.com/" target="_blank"> oficial webpage </a>.
-	</p>
-</div>
-<hr>
-<br>
-
-<div class="gameLink">
-	<a href="https://kiddothegame.com" target="_blank" class="button">
-	Official KIDDO page!</a><br><br>
-
-	<div class="img_row">
-	<img class="centeredGif" src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="" title="Kiddo celebrating"/>
+	<p>Follow its development closely on <a href="https://www.instagram.com/kiddothegame/" target="_blank" rel="noopener">Instagram</a> and <a href="https://www.facebook.com/kiddothegame/" target="_blank" rel="noopener">Facebook</a>.</p>
 </div>
 
-<div class="credits">
-	- Collaborators - <br> 
-Art: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a><br>
-Music: <a href="https://kwintenmordijck.com/" target="_blank"> Kwinten Mordijck</a><br>
+<div class="gallery">
+	<figure>
+		<img src="{{ site.baseurl }}/img/kiddo/sofa.png" alt="Kiddo on the sofa"/>
+		<figcaption>Killing time</figcaption>
+	</figure>
+	<figure>
+		<img src="{{ site.baseurl }}/img/kiddo/fridge.png" alt="Inside the fridge"/>
+		<figcaption>Inside the fridge</figcaption>
+	</figure>
 </div>
+
+<figure class="figure-small">
+	<img src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="Kiddo celebrating"/>
+	<figcaption>Kiddo celebrating</figcaption>
+</figure>

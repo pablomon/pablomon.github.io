@@ -3,22 +3,19 @@ layout: post
 title: The Interview
 description:
 img: /img/theInterview/theInterviewProject.png
+accent: "#6e82f7"  # neon colour for the games grid, taken from the cover
+genre: Narrative quiz
+tagline: A quiz game where the player chooses ideas, rather than concrete answers, sort of defining their idiosyncrasy.
+hero: /img/theInterview/theInterviewLandscape.png
+play: /webgl/theInterview/index.html
 ---
 
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewLandscape.png" alt="" title="Header"/>
-</div>
+<div class="prose">
+	<p>The original idea revolved around all the tricks an interviewer could play on their interviewee during a job interview.</p>
+	<p>It all turned out rather morbid.</p>
+	<p>Since the original idea implied dense dialog trees, it was necessary to think of a tool for the job. I came across Inkle Studios' <a href="https://www.inklestudios.com/ink/" target="_blank" rel="noopener">ink</a>. It makes writing conversational games a breeze, thank you guys. Once you have your ink script ready, you just go through it like so:</p>
 
-<br>
-<i>The interview is a quizz game where the player can choose ideas, rather than concrete answers, sort of defining the players ideosyncrasy.</i><br>
-The original idea revolved around all the tricks an interviewer could play on its interviewee during a job interview.<br>
-
-It all turned out rather morbid.<br>
-
-Since the original idea implied dense dialog trees it was necessary to think of a tool for the job. I came across Inkle studio's <a href="https://www.inklestudios.com/ink/" target="_blank">ink</a>. It makes writting conversational games a breeze, thank you guys.
-Once you have your ink script ready you just go through it like so:
-
-{% highlight c# %}  
+{% highlight c# %}
 [SerializeField] private TextAsset inkScript;
 private Story story;
 ...
@@ -26,22 +23,21 @@ story = new Story(inkScript.text);
 ...
 string text = string.Empty;
 while (story.canContinue)
-{            
+{
     text += story.Continue().Trim();
     text += "\n";
 }
 {% endhighlight %}
 
-
-In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank">Amplify shader editor.</a> It allows to adjust the transition's progression with a float, and you can specify wether to ease in or out with another float.
-Looks like this:
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="" title="screenshot"/>
+	<p>In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank" rel="noopener">Amplify Shader Editor</a>. It allows you to adjust the transition's progression with a float, and to specify whether to ease in or out with another float. It looks like this:</p>
 </div>
-<br>
-There are <i>4 possible endings</i>, depending on your attitud during the interview ( Spoiler, there aren't good endings ).
 
-So put on you best shoes and <a class="gameLink" href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank">give it a try.</a>
+<figure>
+	<img src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="Sprite transition shader graph"/>
+	<figcaption>Sprite transition shader in Amplify Shader Editor</figcaption>
+</figure>
 
-
+<div class="prose">
+	<p>There are <em>4 possible endings</em>, depending on your attitude during the interview (spoiler: there aren't any good endings).</p>
+	<p>So put on your best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank" rel="noopener">give it a try</a>.</p>
+</div>

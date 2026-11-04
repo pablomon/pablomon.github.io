@@ -3,24 +3,19 @@ layout: post
 title: Voyage
 description:
 img: /img/voyage/voyageProject.png
+accent: "#f5ba47"  # neon colour for the games grid, taken from the cover
+genre: Arcade
+tagline: Fast paced asteroids game. Easy to play but totally unforgiving.
+hero: /img/voyage/voyage1.png
+play: /webgl/Voyage/index.html
+credits:
+  - role: Music
+    name: Section31
+    url: https://s31tech.org
 ---
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/voyage/voyage1.png" alt="" title="Voyage"/>
-</div>
-<br>
 
-Fast paced asteroids game. Easy to play but totally unforgiving.
-
-My first from begging to end game. It got me acquainted with the app stores.
-It features randomly generated levels, logarithmic difficulty, goals and cutscenes.
-
-Touch the left / right half of the screen to move. Or A and D on a keyboard. 
-Complete the goals on each mission to move on to the next one.<br><br>
-
-
-<a class="gameLink" href="{{ site.baseurl }}/webgl/voyage/index.html" target="_blank"> Give it a try. </a>
-
-<div class="credits">
-	- Collaborators - <br> 
-Music: <a href="https://s31tech.org" target="_blank"> Section31 </a>
+<div class="prose">
+	<p>My first game from beginning to end. It got me acquainted with the app stores.</p>
+	<p>It features randomly generated levels, logarithmic difficulty, goals and cutscenes.</p>
+	<p>Touch the left / right half of the screen to move, or use A and D on a keyboard. Complete the goals on each mission to move on to the next one.</p>
 </div>

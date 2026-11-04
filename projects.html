@@ -1,0 +1,22 @@
+---
+layout: page
+title: games
+permalink: /projects/
+---
+
+<div class="game-grid">
+{%- for project in site.projects -%}
+  {%- if project.redirect -%}
+    {%- assign href = project.redirect -%}
+  {%- else -%}
+    {%- assign href = project.url | relative_url -%}
+  {%- endif %}
+  <a class="game-card" href="{{ href }}"{% if project.accent %} style="--card-accent: {{ project.accent }};"{% endif %}{% if project.redirect %} target="_blank" rel="noopener"{% endif %}>
+    {% if project.img %}<img src="{{ project.img | relative_url }}" alt="" loading="lazy"/>{% endif %}
+    {% if project.play %}<span class="game-badge"><i class="fa-solid fa-play" aria-hidden="true"></i> Play</span>{% endif %}
+    <span class="game-card-info">
+      <span class="game-card-title">{{ project.title }}</span>
+    </span>
+  </a>
+{%- endfor %}
+</div>

@@ -3,34 +3,31 @@ layout: post
 title: Little Fellas
 description:
 img: /img/littleFellas/lf.png
+accent: "#479ef5"  # neon colour for the games grid, taken from the cover
+genre: Puzzle
+status: In development
+tagline: A game about friendly creatures that need you to snug them together tightly.
+hero: /img/littleFellas/lfp.gif
+credits:
+  - role: Art
+    name: Israel Paez
+    url: https://paezpaez.com
+  - role: Music
+    name: Kwinten Mordijck
+    url: https://kwintenmordijck.com/
 ---
 
-<br>
-Wellcome to Little Fellas!<br><br> A game about friendly creatures that need you to snug them together tightly.<br>
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/littleFellas/lfp.gif" alt="" title="screenshot"/>
+<div class="prose">
+	<p>Welcome to Little Fellas!</p>
+	<p>You can drag and rotate the fellas using the left and right buttons of your mouse.</p>
+	<p>There is already a vertical slice of the game, and we are currently working on filling the map with ever more difficult puzzles.</p>
 </div>
 
-<br>
-You can drag and rotate the fellas using the left and right buttons of your mouse.<br>
-<br>
-There is already a vertical slice of the game.<br>
-<br>
-We are currently working on filling the map with ever more difficult puzzles.
+<figure>
+	<img src="{{ site.baseurl }}/img/littleFellas/lfmap.gif" alt="World map of puzzles"/>
+	<figcaption>The puzzle map</figcaption>
+</figure>
 
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/littleFellas/lfmap.gif" alt="" title="screenshot"/>
+<div class="prose">
+	<p>Coming out in 2024!</p>
 </div>
-<br>
-<br>
-Coming out in 2024!
-<br>
-
-<div class="credits">
-- Collaborators - <br> 
-Art: <a href="https://paezpaez.com" target="_blank"> Israel Paez</a><br>
-Music: <a href="https://kwintenmordijck.com/" target="_blank"> Kwinten Mordijck</a><br>
-</div>
-

@@ -16,6 +16,44 @@
       </div>
     </nav>
 
+    <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode" aria-pressed="false">
+      <i class="fa-solid fa-moon theme-icon-dark" aria-hidden="true"></i>
+      <i class="fa-solid fa-sun theme-icon-light" aria-hidden="true"></i>
+    </button>
+
+    <script>
+      (function () {
+        var btn = document.querySelector(".theme-toggle");
+        var root = document.documentElement;
+        var mq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (!btn) return;
+
+        function systemTheme() { return mq.matches ? "dark" : "light"; }
+        function savedTheme() { try { return localStorage.getItem("theme"); } catch (e) { return null; } }
+        function apply(theme) {
+          root.setAttribute("data-theme", theme);
+          btn.setAttribute("aria-pressed", theme === "dark");
+        }
+
+        apply(savedTheme() || systemTheme());
+
+        btn.addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          apply(next);
+          // Choosing the system theme clears the override, so it follows the system again
+          try {
+            if (next === systemTheme()) localStorage.removeItem("theme");
+            else localStorage.setItem("theme", next);
+          } catch (e) {}
+        });
+
+        // Follow live system changes unless the visitor picked a theme
+        mq.addEventListener("change", function () {
+          if (!savedTheme()) apply(systemTheme());
+        });
+      })();
+    </script>
+
   </div>
 
 </header>

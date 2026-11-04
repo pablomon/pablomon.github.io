@@ -3,42 +3,41 @@ layout: post
 title: 7th fleet
 description: WIP
 img: /img/7f/7fProject.png
+accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
+genre: Top-down 2D space shooter
+status: On hold
+tagline: A nomad civilization steps into the unknown only to get hunted by an old foe.
+hero: /img/7f/7fMenu.png
 ---
 
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fMenu.png" alt="" title="Main menu"/>
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShipyard.png" alt="" title="Shipyard"/>
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fMission.png" alt="" title="Mission mockup"/>
-</div>
-<br>
-
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShips.png" alt="" title="Ships"/>
-</div>
-<div class="col three caption">
-	A sample of ships to chose from
-</div>
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fShader.gif" alt="" title="Shader"/>
-</div>
-<div class="col three caption">
-	A shader that translates height to color
-</div>
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/7f/7fFlying.gif" alt="" title="Flying solo"/>
-</div>
-<div class="col three caption">
-	Ship controls implemented
+<div class="prose">
+	<p>Frenzy action, upgradable ships and sleek graphics with a retro touch.</p>
+	<p>The project is currently on hold.</p>
 </div>
 
-Topdown 2D space shooter.<br>
-<i>A nomad civilization steps into the unknown only to get hunted by an old foe.</i><br>
-Frenzy action, upgradable ships, sleek graphics with a retro touch.
+<div class="gallery">
+	<figure>
+		<img src="{{ site.baseurl }}/img/7f/7fShipyard.png" alt="Shipyard screen"/>
+		<figcaption>Shipyard</figcaption>
+	</figure>
+	<figure>
+		<img src="{{ site.baseurl }}/img/7f/7fMission.png" alt="Mission screen mockup"/>
+		<figcaption>Mission mockup</figcaption>
+	</figure>
+</div>
 
-The project is on hold.
+<figure>
+	<img src="{{ site.baseurl }}/img/7f/7fShips.png" alt="Lineup of ships"/>
+	<figcaption>A sample of ships to choose from</figcaption>
+</figure>
 
-
-<div class="credits">
-
+<div class="gallery">
+	<figure>
+		<img src="{{ site.baseurl }}/img/7f/7fShader.gif" alt="Terrain shader colouring by height"/>
+		<figcaption>A shader that translates height to color</figcaption>
+	</figure>
+	<figure>
+		<img src="{{ site.baseurl }}/img/7f/7fFlying.gif" alt="Ship flying through space"/>
+		<figcaption>Ship controls implemented</figcaption>
+	</figure>
 </div>

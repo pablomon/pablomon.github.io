@@ -3,40 +3,44 @@ layout: post
 title: Broken Oath
 description:
 img: /img/brokenOath/boProject.png
+accent: "#f55247"  # neon colour for the games grid, taken from the cover
+genre: Hack and slash
+tagline: Slash your enemies, evade and parry their attacks through the arenas until the gods are finally done with you.
+hero: /img/brokenOath/evade.gif
+credits:
+  - role: Co-developer
+    name: Eduardo Herrero
+    url: https://cvanderbilt.github.io/CV/1.html
+  - role: Intro art
+    name: DALL·E 3
+  - role: Sprites
+    name: Various
 ---
 
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/brokenOath/evade.gif" alt="" title="gameplay1"/>
-
+<div class="prose">
+	<p>Broken Oath is a hack and slash based on Frank Miller's 300 series, with a twist.</p>
+	<p>It borrows sprites from here and there, and later on it is all harmonized through color changes, post processing and color grading.</p>
 </div>
-<br>
 
-BO is a hack and slash based on Frank miller's 300 series with a twist.<br>
+<figure>
+	<img src="{{ site.baseurl }}/img/brokenOath/intro.png" alt="Intro slide"/>
+	<figcaption>Intro</figcaption>
+</figure>
 
-It borrows sprites from here and there and later on it is all harmonized through color changes, post processing and color grading.<br>
-<div>
-	<img class="col three" src="{{ site.baseurl }}/img/brokenOath/intro.png" alt="" title="intro"/>
+<div class="prose">
+	<p>The game has the following parts:</p>
+	<ul class="feature-list">
+		<li>An intro made of slides (images made with AI)</li>
+		<li>A map showing which level you are on</li>
+		<li>5 levels</li>
+		<li>Two different arenas</li>
+		<li>4 different enemies</li>
+		<li>A boss!</li>
+		<li>An outro</li>
+	</ul>
 </div>
-<br>
 
-Slash your enemies, evade and parry their attacks through the arenas until the gods are finally done with you.<br>
-The game has the following parts:<br>
-intro made of slides ( Images with AI )<br>
-a map showing in which level you are<br>
-5 levels <br>
-two different arenas<br>
-4 different enemies<br>
-a boss!<br>
-outro<br>
-
-<div class="img_row">
-	<img class="col three" src="{{ site.baseurl }}/img/brokenOath/die.gif" alt="" title="gameplay2"/>
-
-</div>
-<br>
-<div class="credits">
-	This game was made hand in hand with <a href="https://cvanderbilt.github.io/CV/1.html" target="_blank"> Eduardo Herrero </a><br> <br>
-	- Collaborators - <br>
-Intro Art: Dalle3<br>
-Sprites: various
-</div>
+<figure>
+	<img src="{{ site.baseurl }}/img/brokenOath/die.gif" alt="Combat gameplay"/>
+	<figcaption>Gameplay</figcaption>
+</figure>
