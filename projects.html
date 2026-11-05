@@ -4,6 +4,11 @@ title: games
 permalink: /projects/
 ---
 
+<label class="grid-tuner">Saturación en reposo
+  <input type="range" min="0" max="100" step="5" value="75" id="rest-slider"/>
+  <output for="rest-slider">75%</output>
+</label>
+
 <div class="game-grid">
 {%- for project in site.projects -%}
   {%- if project.redirect -%}
@@ -37,6 +42,13 @@ permalink: /projects/
     var coarse = window.matchMedia("(hover: none), (any-pointer: coarse)").matches;
     var lastPointer = coarse ? "touch" : "mouse";
     if (coarse) root.classList.add("using-touch");
+
+    // Temporary: slider for the resting saturation with a mouse
+    var slider = document.getElementById("rest-slider");
+    if (slider) slider.addEventListener("input", function () {
+      grid.style.setProperty("--rest-idle", slider.value / 100);
+      slider.nextElementSibling.textContent = slider.value + "%";
+    });
 
     document.addEventListener("pointerdown", function (e) {
       lastPointer = e.pointerType;
