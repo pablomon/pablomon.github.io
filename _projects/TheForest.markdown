@@ -7,7 +7,7 @@ accent: "#47b5f5"  # neon colour for the games grid, taken from the cover
 genre: Short RPG
 tagline: A moody nano story about a boy and his beloved pet friend under the heavy rain.
 hero: /img/theForest/theForest1.png
-play: /webgl/theForest/index.html
+play: /webgl/the-forest/index.html
 credits:
   - role: 3D models
     name: Unity Asset Store (third party)

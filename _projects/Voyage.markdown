@@ -7,7 +7,7 @@ accent: "#f5ba47"  # neon colour for the games grid, taken from the cover
 genre: Arcade
 tagline: Fast paced asteroids game. Easy to play but totally unforgiving.
 hero: /img/voyage/voyage1.png
-play: /webgl/Voyage/index.html
+play: /webgl/voyage/index.html
 credits:
   - role: Music
     name: Section31

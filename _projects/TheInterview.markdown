@@ -7,7 +7,7 @@ accent: "#6e82f7"  # neon colour for the games grid, taken from the cover
 genre: Narrative quiz
 tagline: A quiz game where the player chooses ideas, rather than concrete answers, sort of defining their idiosyncrasy.
 hero: /img/theInterview/theInterviewLandscape.png
-play: /webgl/theInterview/index.html
+play: /webgl/the-interview/index.html
 ---
 
 <div class="prose">
@@ -39,5 +39,5 @@ while (story.canContinue)
 
 <div class="prose">
 	<p>There are <em>4 possible endings</em>, depending on your attitude during the interview (spoiler: there aren't any good endings).</p>
-	<p>So put on your best shoes and <a href="{{ site.baseurl }}/webgl/theInterview/index.html" target="_blank" rel="noopener">give it a try</a>.</p>
+	<p>So put on your best shoes and <a href="{{ site.baseurl }}/webgl/the-interview/index.html" target="_blank" rel="noopener">give it a try</a>.</p>
 </div>

@@ -22,7 +22,7 @@ paginate_path: "/blog/page:num/"
 collections:
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /games/:slug/  # lowercase, hyphenated (from the file name, or slug: in front matter)
 
 
 plugins: [jekyll-paginate]

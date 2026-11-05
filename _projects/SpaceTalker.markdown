@@ -6,7 +6,7 @@ img: /img/spaceTalker/spaceTalkerProject.png
 accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
 genre: Tech demo
 tagline: A tiny project to play around with Scriptable Objects in Unity.
-play: /webgl/spaceTalker/index.html
+play: /webgl/space-talker/index.html
 ---
 
 <div class="prose">
