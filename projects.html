@@ -81,67 +81,6 @@ permalink: /projects/
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     findCentered();
-
-    // With a mouse, every card "breathes": fades to colour and back, all in
-    // sync, staying black and white for part of each cycle. Animates --breath
-    // on the grid (see _modern.scss). Tunable with the sliders below the grid.
-    var breath = { cycle: 8, off: 60, peak: 100 }; // seconds, % of cycle off, % colour
-    try {
-      var savedBreath = JSON.parse(localStorage.getItem("gridBreath") || "null");
-      if (savedBreath) for (var key in breath) if (typeof savedBreath[key] === "number") breath[key] = savedBreath[key];
-    } catch (e) {}
-    var breathing = null;
-    function breathe() {
-      if (breathing) { breathing.cancel(); breathing = null; }
-      if (lastPointer !== "mouse" || calm || !grid.animate) return;
-      var off = breath.off / 100;
-      var rise = (1 - off) / 2;
-      var peak = breath.peak / 100;
-      breathing = grid.animate([
-        { "--breath": 0, offset: 0 },
-        { "--breath": 0, offset: off, easing: "ease-in-out" },     // fade in...
-        { "--breath": peak, offset: off + rise, easing: "ease-in-out" }, // ...and out
-        { "--breath": 0, offset: 1 }
-      ], {
-        duration: breath.cycle * 1000,
-        iterations: Infinity
-      });
-    }
-    breathe();
-    document.addEventListener("pointerdown", function () { breathe(); }, true);
-    document.addEventListener("pointermove", function (e) {
-      if (e.pointerType === "mouse" && !breathing) breathe();
-    }, true);
-
-    // Tuning sliders (temporary, built here so they never show without JS)
-    var controls = document.createElement("div");
-    controls.className = "breath-controls";
-    function addSlider(label, unit, min, max, step, prop) {
-      var control = document.createElement("label");
-      control.className = "breath-slider";
-      var caption = document.createElement("span");
-      var slider = document.createElement("input");
-      slider.type = "range";
-      slider.min = String(min);
-      slider.max = String(max);
-      slider.step = String(step);
-      slider.value = String(breath[prop]);
-      function show() { caption.textContent = label + ": " + slider.value + " " + unit; }
-      slider.addEventListener("input", function () {
-        breath[prop] = +slider.value;
-        try { localStorage.setItem("gridBreath", JSON.stringify(breath)); } catch (e) {}
-        show();
-        breathe();
-      });
-      show();
-      control.appendChild(caption);
-      control.appendChild(slider);
-      controls.appendChild(control);
-    }
-    addSlider("Cycle", "s", 1, 30, 0.5, "cycle");
-    addSlider("Off", "%", 0, 95, 5, "off");
-    addSlider("Peak", "%", 10, 100, 5, "peak");
-    grid.parentNode.insertBefore(controls, grid.nextSibling);
     grid.addEventListener("click", function (e) {
       if (calm || lastPointer !== "touch") return;
       var card = e.target.closest(".game-card");
