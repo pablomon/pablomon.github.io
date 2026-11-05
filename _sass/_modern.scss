@@ -186,12 +186,30 @@ hr {
     }
 }
 
+/* Desktop "breathing": every card fades to colour and back, all in sync.
+   --breath (0 = black and white, 1 = colour) is animated on the grid by
+   projects.html and inherited by the cards; hover still sets full colour. */
+@property --breath {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+/* 0-1, how "lit" a card is by hover/tap; a registered property so it can
+   transition smoothly while the image filter itself follows --breath exactly */
+@property --lit {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
 @mixin game-card-active {
     box-shadow: 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
     outline: none;
     text-decoration: none;
 
-    img { transform: scale(1.06); filter: grayscale(0); }
+    --lit: 1;
+    img { transform: scale(1.06); }
     &::after { opacity: 1; }
     .game-card-info { opacity: 1; }
     .game-badge { background: var(--card-accent); }
@@ -208,7 +226,7 @@ hr {
     box-shadow: var(--shadow);
     color: #fff;
     text-decoration: none;
-    transition: box-shadow 0.25s ease;
+    transition: box-shadow 0.25s ease, --lit 0.4s ease;
     /* Each card can override this with its own colour (accent in front matter) */
     --card-accent: var(--neon);
 
@@ -218,9 +236,9 @@ hr {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* Black and white until hovered */
-        filter: grayscale(1);
-        transition: transform 0.5s ease, filter 0.4s ease;
+        /* Black and white until hovered (--breath: desktop "breathing", see @property --breath) */
+        filter: grayscale(calc(1 - max(var(--breath), var(--lit))));
+        transition: transform 0.5s ease;
     }
 
     /* CRT scanlines + inner accent ring, shown on hover */
@@ -240,8 +258,11 @@ hr {
     /* .is-pressed: added on tap on touch screens (see projects.html). :hover
        only counts with a mouse: phones keep the last tapped card "hovered"
        after going back, which would hide the tap effect. */
+    /* .is-centered: on touch screens, the card in the middle of the screen
+       while scrolling (see projects.html) */
     &:focus-visible,
-    &.is-pressed {
+    &.is-pressed,
+    &.is-centered {
         @include game-card-active;
     }
 
@@ -250,6 +271,7 @@ hr {
             @include game-card-active;
         }
     }
+
 }
 
 .game-card-info {
@@ -829,3 +851,34 @@ article a.steam-card {
         .cta { width: 100%; justify-content: center; }
     }
 }
+
+/* Breathing tuning sliders under the games grid */
+.breath-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 28px auto 0;
+}
+
+.breath-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--muted);
+    font-family: "Silkscreen", monospace;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    span { min-width: 110px; text-align: right; }
+
+    input[type="range"] {
+        width: 180px;
+        accent-color: var(--fg);
+        cursor: pointer;
+    }
+}
+
+/* Only meaningful with a mouse: phones don't breathe */
+.using-touch .breath-controls { display: none; }
