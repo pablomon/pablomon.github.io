@@ -29,5 +29,5 @@ credits:
 </figure>
 
 <div class="prose">
-	<p>Coming out in 2024!</p>
+	<p>Coming out in 2027!</p>
 </div>

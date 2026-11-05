@@ -4,15 +4,6 @@ title: games
 permalink: /projects/
 ---
 
-<label class="grid-tuner"><span>Saturación en reposo</span>
-  <input type="range" min="0" max="100" step="5" value="75" data-var="--tune-rest"/>
-  <output>75%</output>
-</label>
-<label class="grid-tuner"><span>Saturación del resto en hover</span>
-  <input type="range" min="0" max="100" step="5" value="0" data-var="--tune-rest-hover"/>
-  <output>0%</output>
-</label>
-
 <div class="game-grid">
 {%- for project in site.projects -%}
   {%- if project.redirect -%}
@@ -46,14 +37,6 @@ permalink: /projects/
     var lastPointer = coarse ? "touch" : "mouse";
     if (coarse) root.classList.add("using-touch");
 
-    // Temporary: sliders to tune the covers' saturation with a mouse in
-    // light mode (at rest, and for the other covers while one is hovered)
-    var sliders = document.querySelectorAll(".grid-tuner input");
-    for (var k = 0; k < sliders.length; k++) sliders[k].addEventListener("input", function () {
-      root.style.setProperty(this.dataset.var, this.value / 100);
-      this.nextElementSibling.textContent = this.value + "%";
-    });
-
     document.addEventListener("pointerdown", function (e) {
       lastPointer = e.pointerType;
       root.classList.toggle("using-touch", e.pointerType === "touch");
@@ -65,6 +48,25 @@ permalink: /projects/
         centerCard(null);
       }
     }, true);
+
+    // Split each title into letters so it can type itself out (see
+    // .game-card-title in _modern.scss); the card keeps the whole title as
+    // its accessible name
+    var titles = grid.querySelectorAll(".game-card-title");
+    for (var t = 0; t < titles.length; t++) {
+      var text = titles[t].textContent.trim();
+      titles[t].closest(".game-card").setAttribute("aria-label", text);
+      titles[t].setAttribute("aria-hidden", "true");
+      titles[t].textContent = "";
+      titles[t].style.setProperty("--n", text.length);
+      for (var c = 0; c < text.length; c++) {
+        var ch = document.createElement("span");
+        ch.className = "ch";
+        ch.style.setProperty("--i", c);
+        ch.textContent = text[c];
+        titles[t].appendChild(ch);
+      }
+    }
 
     // While scrolling on a touch screen, the card in the middle of the screen
     // plays the hover effect, and fades back as it scrolls away

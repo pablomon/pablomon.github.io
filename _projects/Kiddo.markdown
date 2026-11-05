@@ -38,7 +38,7 @@ credits:
 	<img src="{{ site.baseurl }}/img/kiddo/capsule.jpg" alt="" loading="lazy"/>
 	<span class="steam-card-text">
 		<span class="steam-card-title"><i class="fa-brands fa-steam" aria-hidden="true"></i> KIDDO on Steam</span>
-		<span class="steam-card-status">Coming soon</span>
+		<span class="steam-card-status">Coming in 2027</span>
 	</span>
 	<span class="cta">Wishlist on Steam</span>
 </a>
