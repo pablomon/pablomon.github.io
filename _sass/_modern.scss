@@ -186,6 +186,17 @@ hr {
     }
 }
 
+@mixin game-card-active {
+    box-shadow: 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
+    outline: none;
+    text-decoration: none;
+
+    img { transform: scale(1.06); filter: grayscale(0); }
+    &::after { opacity: 1; }
+    .game-card-info { opacity: 1; }
+    .game-badge { background: var(--card-accent); }
+}
+
 .game-card {
     position: relative;
     display: block;
@@ -226,18 +237,18 @@ hr {
         transition: opacity 0.25s ease;
     }
 
-    /* .is-pressed: added on tap on touch screens, which have no hover (see projects.html) */
-    &:hover,
+    /* .is-pressed: added on tap on touch screens (see projects.html). :hover
+       only counts on devices that really hover: phones keep the last tapped
+       card "hovered" after going back, which would hide the tap effect. */
     &:focus-visible,
     &.is-pressed {
-        box-shadow: 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
-        outline: none;
-        text-decoration: none;
+        @include game-card-active;
+    }
 
-        img { transform: scale(1.06); filter: grayscale(0); }
-        &::after { opacity: 1; }
-        .game-card-info { opacity: 1; }
-        .game-badge { background: var(--card-accent); }
+    @media (hover: hover) {
+        &:hover {
+            @include game-card-active;
+        }
     }
 }
 
@@ -751,17 +762,66 @@ article a.cta,
     }
 }
 
-/* Steam store widget at the end of a project page */
-.project-steam {
-    margin: 32px 0 8px;
-    text-align: center;
+/* Steam store card at the end of a project page (themed, unlike Steam's own widget) */
+.steam-card,
+article a.steam-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 640px;
+    margin: 32px auto 8px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--fg);
+    text-align: left;
+    text-decoration: none;
+    transition: border-color 0.2s ease;
 
-    iframe {
-        display: block;
-        width: 100%;
-        max-width: 646px;
-        height: 190px;
-        margin: 0 auto;
-        border: 0;
+    &:hover,
+    &:focus-visible {
+        border-color: var(--muted);
+        color: var(--fg);
+        text-decoration: none;
+
+        .cta { opacity: 0.9; }
+    }
+
+    img {
+        width: 160px;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .cta { flex-shrink: 0; }
+}
+
+.steam-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+}
+
+.steam-card-title {
+    font-weight: 600;
+}
+
+.steam-card-status {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .steam-card,
+    article a.steam-card {
+        flex-wrap: wrap;
+
+        img { width: 100%; }
+        .cta { width: 100%; justify-content: center; }
     }
 }

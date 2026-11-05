@@ -175,6 +175,7 @@
   var SETTLE_RANGE = 650;   // ...plus up to this much, at random
   var FLICKER = 0.35;       // chance per frame that a flickering cell changes
   var MIN_SPEED = 0.25;     // px/ms the pointer needs before characters fly off
+  var MIN_SPEED_TOUCH = 0.08; // fingers move slower than a mouse
   var MAX_PARTICLES = 220;
   var GRAVITY = 0.0016;     // px/ms^2
   var LIFE_MIN = 700;       // ms a flying character lives...
@@ -263,7 +264,8 @@
     });
   }
 
-  function onPointer(e) {
+  // e: anything with clientX/clientY; touch: true for finger drags
+  function onPointer(e, touch) {
     var st = scrambleState();
     if (!st) return;
     var now = performance.now();
@@ -277,7 +279,8 @@
     last = { x: e.clientX, y: e.clientY, t: now };
     var speed = Math.sqrt(vx * vx + vy * vy);
     // Chance that a character under the pointer is knocked loose
-    var knock = speed > MIN_SPEED ? BRUSH * Math.min(1, (speed - MIN_SPEED) * 1.7) : 0;
+    var minSpeed = touch ? MIN_SPEED_TOUCH : MIN_SPEED;
+    var knock = speed > minSpeed ? BRUSH * Math.min(1, (speed - minSpeed) * 1.7) : 0;
 
     var rect = st.pre.getBoundingClientRect();
     var home = box.getBoundingClientRect();
@@ -387,7 +390,29 @@
   }
 
   var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!calm) box.addEventListener("pointermove", onPointer);
+  if (!calm) {
+    // Mouse and pen
+    box.addEventListener("pointermove", function (e) {
+      if (e.pointerType !== "touch") onPointer(e, false);
+    });
+
+    // Fingers use touch events: a drag that starts on the portrait plays the
+    // effect and never scrolls the page. CSS touch-action alone isn't enough
+    // on every mobile browser, and a scroll would cancel the pointer events.
+    var dragging = false;
+    box.addEventListener("touchstart", function (e) {
+      dragging = e.touches.length === 1 && !!e.target.closest("pre, .ascii-live-wrap");
+      last = null; // don't carry the speed over from a previous drag
+      if (dragging) onPointer(e.touches[0], true);
+    }, { passive: true });
+    box.addEventListener("touchmove", function (e) {
+      if (!dragging) return;
+      e.preventDefault();
+      onPointer(e.touches[0], true);
+    }, { passive: false });
+    box.addEventListener("touchend", function () { dragging = false; });
+    box.addEventListener("touchcancel", function () { dragging = false; });
+  }
 
   current = null;
   update();

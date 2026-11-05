@@ -34,6 +34,11 @@ credits:
 	</figure>
 </div>
 
-<div class="project-steam">
-	<iframe src="https://store.steampowered.com/widget/1665910/" title="KIDDO on Steam" width="646" height="190" frameborder="0" loading="lazy"></iframe>
-</div>
+<a class="steam-card" href="https://store.steampowered.com/app/1665910/KIDDO/" target="_blank" rel="noopener">
+	<img src="{{ site.baseurl }}/img/kiddo/capsule.jpg" alt="" loading="lazy"/>
+	<span class="steam-card-text">
+		<span class="steam-card-title"><i class="fa-brands fa-steam" aria-hidden="true"></i> KIDDO on Steam</span>
+		<span class="steam-card-status">Coming soon</span>
+	</span>
+	<span class="cta">Wishlist on Steam</span>
+</a>

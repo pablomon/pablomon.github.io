@@ -44,6 +44,9 @@ permalink: /projects/
     window.addEventListener("pageshow", function () {
       var pressed = grid.querySelectorAll(".is-pressed");
       for (var i = 0; i < pressed.length; i++) pressed[i].classList.remove("is-pressed");
+      // ...and the focus the browser may restore on the tapped card
+      var active = document.activeElement;
+      if (active && active.classList && active.classList.contains("game-card")) active.blur();
     });
   })();
 </script>
