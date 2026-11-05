@@ -22,16 +22,35 @@ permalink: /projects/
 </div>
 
 <script>
-  // Touch screens have no hover, so a tap plays the hover effect first and
-  // opens the game a moment later, once the card has turned to colour.
+  // Touch screens have no real hover, so a tap plays the hover effect first
+  // and opens the game a moment later, once the card has turned to colour.
+  //
+  // Whether input is touch is decided per tap, not with the (hover: none)
+  // media query: some browsers (Samsung Internet on Galaxy phones, for one)
+  // claim to hover. While using touch, <html> gets .using-touch, which also
+  // switches off the CSS :hover styles that phones leave stuck after going back.
   (function () {
     var DELAY = 450; // ms
-    var touch = window.matchMedia("(hover: none)").matches;
-    var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!touch || calm) return;
-
+    var root = document.documentElement;
     var grid = document.querySelector(".game-grid");
+    var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var coarse = window.matchMedia("(hover: none), (any-pointer: coarse)").matches;
+    var lastPointer = coarse ? "touch" : "mouse";
+    if (coarse) root.classList.add("using-touch");
+
+    document.addEventListener("pointerdown", function (e) {
+      lastPointer = e.pointerType;
+      root.classList.toggle("using-touch", e.pointerType === "touch");
+    }, true);
+    document.addEventListener("pointermove", function (e) {
+      if (e.pointerType === "mouse" && lastPointer !== "mouse") {
+        lastPointer = "mouse";
+        root.classList.remove("using-touch");
+      }
+    }, true);
+
     grid.addEventListener("click", function (e) {
+      if (calm || lastPointer !== "touch") return;
       var card = e.target.closest(".game-card");
       if (!card || card.target === "_blank" || card.classList.contains("is-pressed")) return;
       e.preventDefault();
@@ -40,7 +59,7 @@ permalink: /projects/
     });
 
     // Coming back with the browser's back button can restore the page as it
-    // was left, so clear the pressed state
+    // was left, so clear the pressed state...
     window.addEventListener("pageshow", function () {
       var pressed = grid.querySelectorAll(".is-pressed");
       for (var i = 0; i < pressed.length; i++) pressed[i].classList.remove("is-pressed");

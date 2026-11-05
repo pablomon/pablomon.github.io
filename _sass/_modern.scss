@@ -238,15 +238,15 @@ hr {
     }
 
     /* .is-pressed: added on tap on touch screens (see projects.html). :hover
-       only counts on devices that really hover: phones keep the last tapped
-       card "hovered" after going back, which would hide the tap effect. */
+       only counts with a mouse: phones keep the last tapped card "hovered"
+       after going back, which would hide the tap effect. */
     &:focus-visible,
     &.is-pressed {
         @include game-card-active;
     }
 
     @media (hover: hover) {
-        &:hover {
+        :root:not(.using-touch) &:hover {
             @include game-card-active;
         }
     }
@@ -268,13 +268,17 @@ hr {
 }
 
 /* Touch screens have no hover: keep the title visible */
+/* Touch screens keep the black and white look; a tap plays the hover effect
+   before opening the game (see projects.html). Titles stay visible since
+   there is no hover to reveal them. */
 @media (hover: none) {
-    /* Touch screens keep the black and white look; a tap plays the hover
-       effect before opening the game (see projects.html). Titles stay visible
-       since there is no hover to reveal them. */
     .game-card-info {
         opacity: 1;
     }
+}
+
+.using-touch .game-card-info {
+    opacity: 1;
 }
 
 .game-card-title {
