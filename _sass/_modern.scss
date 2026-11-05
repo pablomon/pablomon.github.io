@@ -226,8 +226,10 @@ hr {
         transition: opacity 0.25s ease;
     }
 
+    /* .is-pressed: added on tap on touch screens, which have no hover (see projects.html) */
     &:hover,
-    &:focus-visible {
+    &:focus-visible,
+    &.is-pressed {
         box-shadow: 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
         outline: none;
         text-decoration: none;
@@ -256,16 +258,11 @@ hr {
 
 /* Touch screens have no hover: keep the title visible */
 @media (hover: none) {
+    /* Touch screens keep the black and white look; a tap plays the hover
+       effect before opening the game (see projects.html). Titles stay visible
+       since there is no hover to reveal them. */
     .game-card-info {
         opacity: 1;
-    }
-
-    .game-badge {
-        background: var(--card-accent);
-    }
-
-    .game-card img {
-        filter: none;
     }
 }
 
@@ -472,14 +469,20 @@ hr {
     }
 }
 
+/* :hover/:focus-visible included so the base theme's `a:hover { color: #000 }`
+   doesn't turn the label black on the dark button */
 article a.cta,
 .cta,
-.cta:visited {
+.cta:visited,
+.cta:hover,
+.cta:focus-visible {
     color: var(--bg);
 }
 
 .cta-secondary,
-.cta-secondary:visited {
+.cta-secondary:visited,
+.cta-secondary:hover,
+.cta-secondary:focus-visible {
     background: transparent;
     border: 1px solid var(--line);
     color: var(--fg);
@@ -723,6 +726,13 @@ article a.cta,
 /* Characters knocked off the ASCII portrait by the pointer */
 .aboutPhoto { position: relative; }
 
+/* Dragging a finger over the portrait plays the pointer effect instead of
+   scrolling the page (the page still scrolls from anywhere else) */
+.aboutPhoto pre.ascii-portrait,
+.ascii-live-wrap {
+    touch-action: none;
+}
+
 .ascii-particles {
     position: absolute;
     inset: 0;
@@ -738,5 +748,20 @@ article a.cta,
         font-family: "SFMono-Regular", Menlo, Consolas, monospace;
         white-space: pre;
         will-change: transform, opacity;
+    }
+}
+
+/* Steam store widget at the end of a project page */
+.project-steam {
+    margin: 32px 0 8px;
+    text-align: center;
+
+    iframe {
+        display: block;
+        width: 100%;
+        max-width: 646px;
+        height: 190px;
+        margin: 0 auto;
+        border: 0;
     }
 }

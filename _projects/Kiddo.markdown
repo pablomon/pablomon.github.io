@@ -6,7 +6,7 @@ img: /img/kiddo/kiddoProject.png
 accent: "#ae6ef7"  # neon colour for the games grid, taken from the cover
 genre: Point & click adventure
 status: Demo released
-hero: /img/kiddo/tiredOfLife.png
+hero: /img/kiddo/capsule.jpg  # capsule art, from the YouTube trailer thumbnail
 website: https://kiddothegame.com
 credits:
   - role: Art
@@ -26,7 +26,7 @@ credits:
 <div class="gallery">
 	<figure>
 		<img src="{{ site.baseurl }}/img/kiddo/sofa.png" alt="Kiddo on the sofa"/>
-		<figcaption>Killing time</figcaption>
+		<figcaption>Early times</figcaption>
 	</figure>
 	<figure>
 		<img src="{{ site.baseurl }}/img/kiddo/fridge.png" alt="Inside the fridge"/>
@@ -34,7 +34,6 @@ credits:
 	</figure>
 </div>
 
-<figure class="figure-small">
-	<img src="{{ site.baseurl }}/img/kiddo/celebration.jpg" alt="Kiddo celebrating"/>
-	<figcaption>Kiddo celebrating</figcaption>
-</figure>
+<div class="project-steam">
+	<iframe src="https://store.steampowered.com/widget/1665910/" title="KIDDO on Steam" width="646" height="190" frameborder="0" loading="lazy"></iframe>
+</div>
