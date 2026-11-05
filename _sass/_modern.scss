@@ -266,13 +266,10 @@ hr {
         transition: opacity 0.25s ease;
     }
 
-    /* .is-pressed: added on tap on touch screens (see projects.html). :hover
-       only counts with a mouse: phones keep the last tapped card "hovered"
-       after going back, which would hide the tap effect. */
     /* .is-centered: on touch screens, the card in the middle of the screen
-       while scrolling (see projects.html) */
+       while scrolling (see projects.html). :hover only counts with a mouse:
+       phones keep the last tapped card "hovered" after going back. */
     &:focus-visible,
-    &.is-pressed,
     &.is-centered {
         @include game-card-active;
     }

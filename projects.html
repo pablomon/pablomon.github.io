@@ -31,15 +31,14 @@ permalink: /projects/
 </div>
 
 <script>
-  // Touch screens have no real hover, so a tap plays the hover effect first
-  // and opens the game a moment later, once the card has turned to colour.
+  // Touch screens have no real hover, so while scrolling the card in the
+  // middle of the screen plays the hover effect instead.
   //
   // Whether input is touch is decided per tap, not with the (hover: none)
   // media query: some browsers (Samsung Internet on Galaxy phones, for one)
   // claim to hover. While using touch, <html> gets .using-touch, which also
   // switches off the CSS :hover styles that phones leave stuck after going back.
   (function () {
-    var DELAY = 450; // ms
     var root = document.documentElement;
     var grid = document.querySelector(".game-grid");
     var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -98,25 +97,14 @@ permalink: /projects/
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
     findCentered();
-    grid.addEventListener("click", function (e) {
-      if (calm || lastPointer !== "touch") return;
-      var card = e.target.closest(".game-card");
-      if (!card || card.target === "_blank" || card.classList.contains("is-pressed")) return;
-      e.preventDefault();
-      card.classList.add("is-pressed");
-      setTimeout(function () { window.location.href = card.href; }, DELAY);
-    });
 
     // Coming back with the browser's back button can restore the page as it
-    // was left, so clear the pressed state (and the focus the browser may
-    // restore on the tapped card). Done a moment after the page is visible
-    // again, so the card visibly fades back to black and white: some browsers
-    // (Samsung Internet) report pageshow before painting, which would skip the
-    // transition, so visibilitychange is watched too.
+    // was left, so clear the focus the browser may restore on the tapped card
+    // and pick the centred card again. Done a moment after the page is visible
+    // again: some browsers (Samsung Internet) report pageshow before painting,
+    // so visibilitychange is watched too.
     function release() {
       setTimeout(function () {
-        var pressed = grid.querySelectorAll(".is-pressed");
-        for (var i = 0; i < pressed.length; i++) pressed[i].classList.remove("is-pressed");
         var active = document.activeElement;
         if (active && active.classList && active.classList.contains("game-card")) active.blur();
         findCentered();
