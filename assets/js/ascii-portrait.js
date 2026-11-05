@@ -17,7 +17,10 @@
  *
  * Moving the pointer over the portrait scrambles the characters around it
  * (each flickers through random characters of its own tier, so the image stays
- * readable) and, when moving fast, knocks some loose so they fly off and fall.
+ * readable) and, when moving fast, knocks them loose so they fly off and fall.
+ * Underneath there is a second portrait (a skull, assets/ascii/skull-*.txt,
+ * same framing and size): the holes show its characters, so wiping the face
+ * reveals the skull until the face refills a few seconds later.
  */
 (function () {
   var box = document.querySelector(".aboutPhoto[data-ascii-base]");
@@ -72,12 +75,15 @@
     return " ";
   }
 
-  function toText(grid) {
+  // salt shifts the pseudo-random letters, so the hidden portrait doesn't
+  // reuse the same letter as the face in each cell
+  function toText(grid, salt) {
     var dark = root.getAttribute("data-theme") === "dark";
+    salt = salt || 0;
     return grid.split("\n").map(function (line, row) {
       return line.replace(/[0-9a-j]/g, function (d, col) {
         var i = parseInt(d, 20);
-        return toChar(dark ? SHADES - 1 - i : i, row, col);
+        return toChar(dark ? SHADES - 1 - i : i, row + salt, col);
       });
     }).join("\n");
   }
@@ -110,10 +116,23 @@
     wrap.style.height = SIZE + "px";
   }
 
+  // Hidden portrait revealed under the wiped characters, one grid per level
+  var hiddenGrids = {};
+  var hiddenLoading = {};
+  function loadHidden(level) {
+    if (hiddenGrids[level] || hiddenLoading[level]) return;
+    hiddenLoading[level] = true;
+    fetch(base + "skull-" + level + ".txt")
+      .then(function (r) { return r.ok ? r.text() : Promise.reject(r.status); })
+      .then(function (text) { hiddenGrids[level] = text.replace(/\s+$/, "").split("\n"); })
+      .catch(function () { hiddenLoading[level] = false; });
+  }
+
   function update() {
     var level = pickLevel();
     if (level === current) return;
     current = level;
+    loadHidden(level);
     if (level === LEVELS[0] || cache[level]) {
       render(level);
       return;
@@ -150,7 +169,8 @@
   // off in the direction of the movement, fall and fade, and the empty cell
   // flickers back to its character a moment later.
 
-  var RADIUS = 56;          // px around the pointer that reacts
+  var RADIUS = 55;          // px around the pointer that reacts
+  var BRUSH = 0.48;         // 0-1: the most a fast pass can knock loose
   var SETTLE_MIN = 250;     // ms a scrambled cell keeps flickering...
   var SETTLE_RANGE = 650;   // ...plus up to this much, at random
   var FLICKER = 0.35;       // chance per frame that a flickering cell changes
@@ -159,8 +179,10 @@
   var GRAVITY = 0.0016;     // px/ms^2
   var LIFE_MIN = 700;       // ms a flying character lives...
   var LIFE_RANGE = 700;     // ...plus up to this much
-  var GAP_MIN = 600;        // ms a knocked-out cell stays empty...
-  var GAP_RANGE = 600;      // ...plus up to this much
+  // Longest time (ms) a knocked-out cell shows the hidden portrait; each one
+  // waits 40-100% of it, so the face refills a few characters at a time
+  var REFILL = 4000;
+  var RETURN_FLICKER = 700; // ms a returning character flickers before settling
 
   var tierOf = {};
   TIERS.forEach(function (t) {
@@ -200,8 +222,14 @@
         orig: orig,
         cells: orig.map(function (l) { return l.split(""); }),
         cols: Math.max.apply(null, orig.map(function (l) { return l.length; })),
+        level: current,
+        hidden: null, // [lines] of the hidden portrait, as characters
         active: {}
       };
+    }
+    // The hidden grid may arrive after the state was built
+    if (!scramble.hidden && hiddenGrids[scramble.level]) {
+      scramble.hidden = toText(hiddenGrids[scramble.level].join("\n"), 7919).split("\n");
     }
     return scramble;
   }
@@ -249,7 +277,7 @@
     last = { x: e.clientX, y: e.clientY, t: now };
     var speed = Math.sqrt(vx * vx + vy * vy);
     // Chance that a character under the pointer is knocked loose
-    var knock = speed > MIN_SPEED ? Math.min(0.5, (speed - MIN_SPEED) * 0.35) : 0;
+    var knock = speed > MIN_SPEED ? BRUSH * Math.min(1, (speed - MIN_SPEED) * 1.7) : 0;
 
     var rect = st.pre.getBoundingClientRect();
     var home = box.getBoundingClientRect();
@@ -270,21 +298,25 @@
         if (d2 > RADIUS * RADIUS) continue;
         var orig = st.orig[r].charAt(c);
         var set = tierOf[orig];
-        if (!set) continue; // blank background stays blank
+        var under = st.hidden ? (st.hidden[r] || "").charAt(c) || " " : " ";
+        // Cells blank in both portraits (outside the circle, very light) don't react
+        if (!set && under === " ") continue;
         var key = r + "," + c;
         var cell = st.active[key];
         if (cell && cell.empty > now) continue; // already knocked out
 
         // Closer to the pointer = more likely to fly
-        if (knock && particles.length < MAX_PARTICLES &&
-            Math.random() < knock * (1 - Math.sqrt(d2) / RADIUS)) {
-          launch(st.cells[r][c], rect.left - home.left + c * cw, rect.top - home.top + r * ch, ch, vx, vy, now);
-          var empty = now + GAP_MIN + Math.random() * GAP_RANGE;
-          st.cells[r][c] = " ";
-          st.active[key] = { empty: empty, until: empty + SETTLE_MIN };
-        } else {
+        if (knock && Math.random() < knock * (1 - 0.5 * Math.sqrt(d2) / RADIUS)) {
+          // Past the particle cap the character just vanishes, so wiping still works
+          if (set && particles.length < MAX_PARTICLES) {
+            launch(st.cells[r][c], rect.left - home.left + c * cw, rect.top - home.top + r * ch, ch, vx, vy, now);
+          }
+          var empty = now + REFILL * (0.4 + 0.6 * Math.random());
+          st.cells[r][c] = under; // reveal the hidden portrait
+          st.active[key] = { empty: empty, until: empty + RETURN_FLICKER };
+        } else if (set) {
           st.cells[r][c] = randomFrom(set);
-          st.active[key] = { empty: 0, until: now + SETTLE_MIN + Math.random() * SETTLE_RANGE };
+          st.active[key] = { empty: 0, until: now + SETTLE_MIN + Math.random() * SETTLE_RANGE, flickering: true };
         }
       }
     }
@@ -315,8 +347,13 @@
           any = true;
         } else if (now < cell.until) {
           any = true;
-          if (st.cells[r][c] === " " || Math.random() < FLICKER) {
-            st.cells[r][c] = randomFrom(tierOf[orig]);
+          var set = tierOf[orig];
+          if (!set) {
+            st.cells[r][c] = orig;
+            changed = true;
+          } else if (!cell.flickering || Math.random() < FLICKER) {
+            cell.flickering = true; // first frame after a refill always switches away from the hidden char
+            st.cells[r][c] = randomFrom(set);
             changed = true;
           }
         } else {
