@@ -12,6 +12,12 @@
     --accent:  #8a6100;  /* dark amber: readable on white */
     --shadow:  0 1px 2px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.06), 0 16px 36px rgba(0, 0, 0, 0.12);
+    /* Games grid with a mouse: colour of the covers at rest, and of the others
+       while one is hovered (0-1). Light values tunable with the sliders. */
+    --grid-rest: var(--tune-rest, 0.75);
+    --grid-rest-hover: var(--tune-rest-hover, 0);
+    /* Dark shadow under the hovered card, so its colours pop on white */
+    --card-under: 0 22px 40px -8px rgba(0, 0, 0, 0.55);
     color-scheme: light;
 }
 
@@ -24,6 +30,9 @@
     --accent:  #ffd23f;
     --shadow:  0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
     --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.5), 0 16px 36px rgba(0, 0, 0, 0.6);
+    --grid-rest: 0.5;
+    --grid-rest-hover: 0.1;
+    --card-under: 0 0 0 transparent;
     color-scheme: dark;
 }
 
@@ -204,7 +213,7 @@ hr {
 }
 
 @mixin game-card-active {
-    box-shadow: 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
+    box-shadow: var(--card-under), 0 14px 34px color-mix(in srgb, var(--card-accent) 40%, transparent);
     outline: none;
     text-decoration: none;
 
@@ -856,28 +865,34 @@ article a.steam-card {
 
 /* Pale covers at rest with a mouse; hovering one desaturates the rest */
 @media (hover: hover) {
-    /* --rest-idle: set by the saturation slider (see projects.html) */
     :root:not(.using-touch) .game-grid {
-        --rest: var(--rest-idle, 0.75);
+        --rest: var(--grid-rest);
         transition: unquote("--rest 0.4s ease");
     }
 
     :root:not(.using-touch) .game-grid:has(.game-card:hover) {
-        --rest: 0;
+        --rest: var(--grid-rest-hover);
     }
 }
 
-/* Temporary slider to tune the resting saturation (desktop only) */
+/* Temporary sliders to tune the light-mode saturation (desktop only) */
 .grid-tuner {
     display: none;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 0.9rem;
     color: var(--muted);
     input { flex: 0 1 220px; accent-color: var(--neon); }
+    span { min-width: 15em; text-align: left; }
     output { min-width: 3em; font-variant-numeric: tabular-nums; }
 }
+.grid-tuner:last-of-type { margin-bottom: 1.25rem; }
 @media (hover: hover) {
     :root:not(.using-touch) .grid-tuner { display: flex; }
+}
+/* Dark mode is already tuned */
+:root[data-theme="dark"] .grid-tuner { display: none; }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) .grid-tuner { display: none; }
 }
