@@ -176,6 +176,7 @@
   var FLICKER = 0.35;       // chance per frame that a flickering cell changes
   var MIN_SPEED = 0.25;     // px/ms the pointer needs before characters fly off
   var MIN_SPEED_TOUCH = 0.08; // fingers move slower than a mouse
+  var FLYING = false;       // knocked-out characters fly off as particles (false: they just vanish)
   var MAX_PARTICLES = 220;
   var GRAVITY = 0.0016;     // px/ms^2
   var LIFE_MIN = 700;       // ms a flying character lives...
@@ -312,7 +313,7 @@
         // Closer to the pointer = more likely to fly
         if (knock && Math.random() < knock * (1 - 0.5 * Math.sqrt(d2) / RADIUS)) {
           // Past the particle cap the character just vanishes, so wiping still works
-          if (set && particles.length < MAX_PARTICLES) {
+          if (FLYING && set && particles.length < MAX_PARTICLES) {
             launch(st.cells[r][c], rect.left + c * cw, rect.top + r * ch, ch, vx, vy, now); // viewport coords
           }
           var empty = now + REFILL * (0.4 + 0.6 * Math.random());
