@@ -16,7 +16,7 @@ play: /webgl/poesiat-pong/index.html
 		<figcaption>Gameplay</figcaption>
 	</figure>
 	<div class="prose">
-		<p>So, these two guys are definitely famous because of their beers. But what did they do in their spare time? Wouldn't they probably play some sort of tennis? Wouldn't they have played Pong if they could?</p>
+		<p>So, these two guys are definitely famous for their beers. But what did they do in their spare time? Wouldn't they play some sort of tennis? Wouldn't they have played Pong if they could?</p>
 		<p>A punk version of the classic Pong tailored for <a href="https://www.facebook.com/poesiatenkater/" target="_blank" rel="noopener">Poesiat &amp; Kater brewery</a>.</p>
 		<p>Choose your favorite brewer and see if you can <a href="{{ site.baseurl }}/webgl/poesiat-pong/index.html" target="_blank" rel="noopener">beat the game</a>.</p>
 	</div>

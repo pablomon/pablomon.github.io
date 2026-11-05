@@ -6,7 +6,7 @@ description:
 img: /img/the-interview/the-interview-project.png
 accent: "#6e82f7"  # neon colour for the games grid, taken from the cover
 genre: Narrative quiz
-tagline: A quiz game where the player chooses ideas, rather than concrete answers, sort of defining their idiosyncrasy.
+tagline: A quiz game where you choose ideas rather than concrete answers, gradually revealing who you are.
 hero: /img/the-interview/the-interview-landscape.png
 play: /webgl/the-interview/index.html
 ---
@@ -14,7 +14,7 @@ play: /webgl/the-interview/index.html
 <div class="prose">
 	<p>The original idea revolved around all the tricks an interviewer could play on their interviewee during a job interview.</p>
 	<p>It all turned out rather morbid.</p>
-	<p>Since the original idea implied dense dialog trees, it was necessary to think of a tool for the job. I came across Inkle Studios' <a href="https://www.inklestudios.com/ink/" target="_blank" rel="noopener">ink</a>. It makes writing conversational games a breeze, thank you guys. Once you have your ink script ready, you just go through it like so:</p>
+	<p>Since the original idea implied dense dialog trees, it was necessary to think of a tool for the job. I came across inkle's <a href="https://www.inklestudios.com/ink/" target="_blank" rel="noopener">ink</a>. It makes writing conversational games a breeze, thank you guys. Once you have your ink script ready, you just go through it like so:</p>
 
 {% highlight c# %}
 [SerializeField] private TextAsset inkScript;
@@ -30,7 +30,7 @@ while (story.canContinue)
 }
 {% endhighlight %}
 
-	<p>In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank" rel="noopener">Amplify Shader Editor</a>. It allows you to adjust the transition's progression with a float, and to specify whether to ease in or out with another float. It looks like this:</p>
+	<p>In order to keep the art to a minimum, I made a simple shader to ease between sprites using <a href="http://amplify.pt/unity/amplify-shader-editor/" target="_blank" rel="noopener">Amplify Shader Editor</a>. It allows you to adjust the transition's progress with a float, and to specify whether to ease in or out with another float. It looks like this:</p>
 </div>
 
 <figure>

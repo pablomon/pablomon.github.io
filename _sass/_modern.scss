@@ -63,6 +63,11 @@ a {
     transition: color 0.2s ease, opacity 0.2s ease;
 }
 
+/* The base theme turns hovered links near-black, invisible in dark mode */
+a:hover {
+    color: var(--accent);
+}
+
 /* The base theme forces article links to black; follow the text colour instead */
 article a {
     color: var(--fg);

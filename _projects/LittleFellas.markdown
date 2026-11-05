@@ -7,7 +7,7 @@ img: /img/little-fellas/lf.png
 accent: "#479ef5"  # neon colour for the games grid, taken from the cover
 genre: Puzzle
 status: In development
-tagline: A game about friendly creatures that need you to snug them together tightly.
+tagline: A game about friendly creatures that need you to fit them snugly together.
 hero: /img/little-fellas/lfp.gif
 credits:
   - role: Art
@@ -20,7 +20,7 @@ credits:
 
 <div class="prose">
 	<p>Welcome to Little Fellas!</p>
-	<p>You can drag and rotate the fellas using the left and right buttons of your mouse.</p>
+	<p>You can drag and rotate the fellas with the left and right mouse buttons.</p>
 	<p>There is already a vertical slice of the game, and we are currently working on filling the map with ever more difficult puzzles.</p>
 </div>
 

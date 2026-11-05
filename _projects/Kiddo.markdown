@@ -18,7 +18,7 @@ credits:
 ---
 
 <div class="prose">
-	<p>KIDDO is a hand drawn point &amp; click adventure game set in a dystopian present, where the population lives comfortably isolated in their apartments, relying on a powerful artificial intelligence to provide for all their needs.</p>
+	<p>KIDDO is a hand-drawn point &amp; click adventure game set in a dystopian present, where the population lives comfortably isolated in their apartments, relying on a powerful artificial intelligence to provide for all their needs.</p>
 	<p>The game is currently under heavy development and we are actively looking for funding.</p>
 	<p>Follow its development closely on <a href="https://www.instagram.com/kiddothegame/" target="_blank" rel="noopener">Instagram</a> and <a href="https://www.facebook.com/kiddothegame/" target="_blank" rel="noopener">Facebook</a>.</p>
 </div>

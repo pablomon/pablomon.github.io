@@ -19,8 +19,8 @@ credits:
 ---
 
 <div class="prose">
-	<p>Broken Oath is a hack and slash based on Frank Miller's 300 series, with a twist.</p>
-	<p>It borrows sprites from here and there, and later on it is all harmonized through color changes, post processing and color grading.</p>
+	<p>Broken Oath is a hack and slash inspired by Frank Miller's 300, with a twist.</p>
+	<p>It borrows sprites from here and there, which are then harmonized through color changes, post-processing and color grading.</p>
 </div>
 
 <figure>
@@ -33,9 +33,9 @@ credits:
 	<ul class="feature-list">
 		<li>An intro made of slides (images made with AI)</li>
 		<li>A map showing which level you are on</li>
-		<li>5 levels</li>
-		<li>Two different arenas</li>
-		<li>4 different enemies</li>
+		<li>Five levels</li>
+		<li>Two arenas</li>
+		<li>Four enemy types</li>
 		<li>A boss!</li>
 		<li>An outro</li>
 	</ul>

@@ -1,7 +1,7 @@
 ---
 layout: post
 slug: space-talker  # URL: /games/space-talker/
-title: Space talker
+title: Space Talker
 description:
 img: /img/space-talker/space-talker-project.png
 accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
@@ -11,7 +11,7 @@ play: /webgl/space-talker/index.html
 ---
 
 <div class="prose">
-	<p>A tiny project I did to play around with some techniques using Scriptable Objects that I learnt from watching some talks on the matter.</p>
+	<p>A tiny project I did to play around with some techniques using Scriptable Objects that I learned from watching some talks on the matter.</p>
 	<p>Equally great, these two talks will not only teach you about Scriptable Objects, but also provide some insight into how Unity works under the hood. There is a lot to take away from them:</p>
 	<ul class="feature-list">
 		<li><a href="https://www.youtube.com/watch?v=6vmRwLYWNRo" target="_blank" rel="noopener">Richard Fine's talk</a></li>

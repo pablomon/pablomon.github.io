@@ -1,17 +1,17 @@
 ---
 layout: post
-title: 7th fleet
+title: 7th Fleet
 description: WIP
 img: /img/7f/7f-project.png
 accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
 genre: Top-down 2D space shooter
 status: On hold
-tagline: A nomad civilization steps into the unknown only to get hunted by an old foe.
+tagline: A nomad civilization steps into the unknown only to be hunted by an old foe.
 hero: /img/7f/7f-menu.png
 ---
 
 <div class="prose">
-	<p>Frenzy action, upgradable ships and sleek graphics with a retro touch.</p>
+	<p>Frantic action, upgradable ships and sleek graphics with a retro touch.</p>
 	<p>The project is currently on hold.</p>
 </div>
 
@@ -33,7 +33,7 @@ hero: /img/7f/7f-menu.png
 
 <div class="gallery">
 	<figure>
-		<img src="{{ site.baseurl }}/img/7f/7f-shader.gif" alt="Terrain shader colouring by height"/>
+		<img src="{{ site.baseurl }}/img/7f/7f-shader.gif" alt="Terrain shader coloring by height"/>
 		<figcaption>A shader that translates height to color</figcaption>
 	</figure>
 	<figure>

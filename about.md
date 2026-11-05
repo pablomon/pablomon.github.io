@@ -126,7 +126,7 @@ QOQQNQMMQNODNROOMDWZz.,                   xeYKPOVVYSKXXHNQGGMNNWDYqynbabqshsqvun
 	<br>
 	I focus on the technical side, but I love game design and narrative, and I have a real soft spot for pixel art.
 	<br>
-	Always open to hear about cool projects.
+	Always open to hearing about cool projects.
 	<br>
 	<br>
 	Get in touch at <a href="mailto:pablomonteserin@gmail.com">pablomonteserin@gmail.com</a>.
@@ -142,6 +142,6 @@ QOQQNQMMQNODNROOMDWZz.,                   xeYKPOVVYSKXXHNQGGMNNWDYqynbabqshsqvun
 </span>
 
 <div class="center">
-	Mail much preferred
+	Email much preferred
 </div>
 
