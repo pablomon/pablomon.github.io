@@ -169,8 +169,8 @@
   // off in the direction of the movement, fall and fade, and the empty cell
   // flickers back to its character a moment later.
 
-  var RADIUS = 44;          // px around the pointer that reacts
-  var BRUSH = 0.34;         // 0-1: the most a fast pass can knock loose
+  var RADIUS = 40;          // px around the pointer that reacts
+  var BRUSH = 0.27;         // 0-1: the most a fast pass can knock loose
   var SETTLE_MIN = 250;     // ms a scrambled cell keeps flickering...
   var SETTLE_RANGE = 650;   // ...plus up to this much, at random
   var FLICKER = 0.35;       // chance per frame that a flickering cell changes
@@ -182,7 +182,7 @@
   var LIFE_RANGE = 700;     // ...plus up to this much
   // Longest time (ms) a knocked-out cell shows the hidden portrait; each one
   // waits 40-100% of it, so the face refills a few characters at a time
-  var REFILL = 4000;
+  var REFILL = 5000;
   var RETURN_FLICKER = 700; // ms a returning character flickers before settling
 
   var tierOf = {};
@@ -244,7 +244,9 @@
     layer = document.createElement("div");
     layer.className = "ascii-particles";
     layer.setAttribute("aria-hidden", "true");
-    box.appendChild(layer);
+    // Fixed to the viewport and clipped, so flying characters can never make
+    // the page wider or taller (on phones that zooms the whole page out)
+    document.body.appendChild(layer);
   }
 
   function launch(chr, x, y, size, vx, vy, now) {
@@ -283,7 +285,6 @@
     var knock = speed > minSpeed ? BRUSH * Math.min(1, (speed - minSpeed) * 1.7) : 0;
 
     var rect = st.pre.getBoundingClientRect();
-    var home = box.getBoundingClientRect();
     var rows = st.orig.length;
     var cw = rect.width / st.cols;
     var ch = rect.height / rows;
@@ -312,7 +313,7 @@
         if (knock && Math.random() < knock * (1 - 0.5 * Math.sqrt(d2) / RADIUS)) {
           // Past the particle cap the character just vanishes, so wiping still works
           if (set && particles.length < MAX_PARTICLES) {
-            launch(st.cells[r][c], rect.left - home.left + c * cw, rect.top - home.top + r * ch, ch, vx, vy, now);
+            launch(st.cells[r][c], rect.left + c * cw, rect.top + r * ch, ch, vx, vy, now); // viewport coords
           }
           var empty = now + REFILL * (0.4 + 0.6 * Math.random());
           st.cells[r][c] = under; // reveal the hidden portrait
