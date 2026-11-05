@@ -58,7 +58,6 @@ permalink: /projects/
       titles[t].closest(".game-card").setAttribute("aria-label", text);
       titles[t].setAttribute("aria-hidden", "true");
       titles[t].textContent = "";
-      titles[t].style.setProperty("--n", text.length);
       for (var c = 0; c < text.length; c++) {
         var ch = document.createElement("span");
         ch.className = "ch";

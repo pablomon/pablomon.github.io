@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kiddo
+title: KIDDO
 description: WIP
 img: /img/kiddo/kiddoProject.png
 accent: "#ae6ef7"  # neon colour for the games grid, taken from the cover
