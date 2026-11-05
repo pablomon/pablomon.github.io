@@ -2,7 +2,7 @@
 layout: post
 title: Voyage
 description:
-img: /img/voyage/voyageProject.png
+img: /img/voyage/voyage-project.png
 accent: "#f5ba47"  # neon colour for the games grid, taken from the cover
 genre: Arcade
 tagline: Fast paced asteroids game. Easy to play but totally unforgiving.

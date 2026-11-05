@@ -1,8 +1,9 @@
 ---
 layout: post
+slug: space-talker  # URL: /games/space-talker/
 title: Space talker
 description:
-img: /img/spaceTalker/spaceTalkerProject.png
+img: /img/space-talker/space-talker-project.png
 accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
 genre: Tech demo
 tagline: A tiny project to play around with Scriptable Objects in Unity.
@@ -21,11 +22,11 @@ play: /webgl/space-talker/index.html
 
 <div class="gallery gallery-2-1">
 	<figure>
-		<img src="{{ site.baseurl }}/img/spaceTalker/spaceTalker3.png" alt="Space Talker running on Android"/>
+		<img src="{{ site.baseurl }}/img/space-talker/space-talker3.png" alt="Space Talker running on Android"/>
 		<figcaption>Android screenshot</figcaption>
 	</figure>
 	<figure>
-		<img src="{{ site.baseurl }}/img/spaceTalker/spaceTalker2.png" alt="Space Talker in the Unity editor"/>
+		<img src="{{ site.baseurl }}/img/space-talker/space-talker2.png" alt="Space Talker in the Unity editor"/>
 		<figcaption>Unity editor</figcaption>
 	</figure>
 </div>

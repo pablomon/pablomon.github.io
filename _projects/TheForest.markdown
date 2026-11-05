@@ -1,12 +1,13 @@
 ---
 layout: post
+slug: the-forest  # URL: /games/the-forest/
 title: The forest
 description:
-img: /img/theForest/theForestProject.png
+img: /img/the-forest/the-forest-project.png
 accent: "#47b5f5"  # neon colour for the games grid, taken from the cover
 genre: Short RPG
 tagline: A moody nano story about a boy and his beloved pet friend under the heavy rain.
-hero: /img/theForest/theForest1.png
+hero: /img/the-forest/the-forest1.png
 play: /webgl/the-forest/index.html
 credits:
   - role: 3D models

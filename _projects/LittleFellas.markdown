@@ -1,13 +1,14 @@
 ---
 layout: post
+slug: little-fellas  # URL: /games/little-fellas/
 title: Little Fellas
 description:
-img: /img/littleFellas/lf.png
+img: /img/little-fellas/lf.png
 accent: "#479ef5"  # neon colour for the games grid, taken from the cover
 genre: Puzzle
 status: In development
 tagline: A game about friendly creatures that need you to snug them together tightly.
-hero: /img/littleFellas/lfp.gif
+hero: /img/little-fellas/lfp.gif
 credits:
   - role: Art
     name: Israel Paez
@@ -24,7 +25,7 @@ credits:
 </div>
 
 <figure>
-	<img src="{{ site.baseurl }}/img/littleFellas/lfmap.gif" alt="World map of puzzles"/>
+	<img src="{{ site.baseurl }}/img/little-fellas/lfmap.gif" alt="World map of puzzles"/>
 	<figcaption>The puzzle map</figcaption>
 </figure>
 

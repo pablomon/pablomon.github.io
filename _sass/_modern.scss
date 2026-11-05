@@ -82,9 +82,7 @@ hr {
 .site-header {
     /* Fixed header must stay above positioned content (cards, ASCII portrait) */
     z-index: 100;
-    background-color: color-mix(in srgb, var(--bg) 82%, transparent);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    background-color: var(--bg);
     border-bottom: 1px solid var(--line);
 }
 

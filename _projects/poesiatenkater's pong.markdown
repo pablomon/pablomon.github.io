@@ -3,7 +3,7 @@ layout: post
 slug: poesiatenkaters-pong  # URL: /games/poesiatenkaters-pong/
 title: Poesiat en Kater's PONG
 description:
-img: /img/poesiatPong/project.png
+img: /img/poesiat-pong/project.png
 accent: "#e8e8e8"  # neon colour for the games grid, taken from the cover
 genre: Arcade
 tagline: A punk version of the classic Pong tailored for Poesiat &amp; Kater brewery.
@@ -12,7 +12,7 @@ play: /webgl/poesiat-pong/index.html
 
 <div class="split">
 	<figure>
-		<img src="{{ site.baseurl }}/img/poesiatPong/gameplay.png" alt="Pong gameplay with the two brewers"/>
+		<img src="{{ site.baseurl }}/img/poesiat-pong/gameplay.png" alt="Pong gameplay with the two brewers"/>
 		<figcaption>Gameplay</figcaption>
 	</figure>
 	<div class="prose">

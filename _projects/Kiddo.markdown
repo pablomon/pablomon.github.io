@@ -2,7 +2,7 @@
 layout: post
 title: KIDDO
 description: WIP
-img: /img/kiddo/kiddoProject.png
+img: /img/kiddo/kiddo-project.png
 accent: "#ae6ef7"  # neon colour for the games grid, taken from the cover
 genre: Point & click adventure
 status: Demo released

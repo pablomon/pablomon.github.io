@@ -1,12 +1,13 @@
 ---
 layout: post
+slug: the-interview  # URL: /games/the-interview/
 title: The Interview
 description:
-img: /img/theInterview/theInterviewProject.png
+img: /img/the-interview/the-interview-project.png
 accent: "#6e82f7"  # neon colour for the games grid, taken from the cover
 genre: Narrative quiz
 tagline: A quiz game where the player chooses ideas, rather than concrete answers, sort of defining their idiosyncrasy.
-hero: /img/theInterview/theInterviewLandscape.png
+hero: /img/the-interview/the-interview-landscape.png
 play: /webgl/the-interview/index.html
 ---
 
@@ -33,7 +34,7 @@ while (story.canContinue)
 </div>
 
 <figure>
-	<img src="{{ site.baseurl }}/img/theInterview/theInterviewShader.png" alt="Sprite transition shader graph"/>
+	<img src="{{ site.baseurl }}/img/the-interview/the-interview-shader.png" alt="Sprite transition shader graph"/>
 	<figcaption>Sprite transition shader in Amplify Shader Editor</figcaption>
 </figure>
 

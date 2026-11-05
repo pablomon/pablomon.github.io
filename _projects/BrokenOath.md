@@ -1,12 +1,13 @@
 ---
 layout: post
+slug: broken-oath  # URL: /games/broken-oath/
 title: Broken Oath
 description:
-img: /img/brokenOath/boProject.png
+img: /img/broken-oath/bo-project.png
 accent: "#f55247"  # neon colour for the games grid, taken from the cover
 genre: Hack and slash
 tagline: Slash your enemies, evade and parry their attacks through the arenas until the gods are finally done with you.
-hero: /img/brokenOath/evade.gif
+hero: /img/broken-oath/evade.gif
 credits:
   - role: Co-developer
     name: Eduardo Herrero
@@ -23,7 +24,7 @@ credits:
 </div>
 
 <figure>
-	<img src="{{ site.baseurl }}/img/brokenOath/intro.png" alt="Intro slide"/>
+	<img src="{{ site.baseurl }}/img/broken-oath/intro.png" alt="Intro slide"/>
 	<figcaption>Intro</figcaption>
 </figure>
 
@@ -41,6 +42,6 @@ credits:
 </div>
 
 <figure>
-	<img src="{{ site.baseurl }}/img/brokenOath/die.gif" alt="Combat gameplay"/>
+	<img src="{{ site.baseurl }}/img/broken-oath/die.gif" alt="Combat gameplay"/>
 	<figcaption>Gameplay</figcaption>
 </figure>
