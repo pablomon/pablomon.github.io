@@ -169,8 +169,8 @@
   // off in the direction of the movement, fall and fade, and the empty cell
   // flickers back to its character a moment later.
 
-  var RADIUS = 55;          // px around the pointer that reacts
-  var BRUSH = 0.48;         // 0-1: the most a fast pass can knock loose
+  var RADIUS = 44;          // px around the pointer that reacts
+  var BRUSH = 0.34;         // 0-1: the most a fast pass can knock loose
   var SETTLE_MIN = 250;     // ms a scrambled cell keeps flickering...
   var SETTLE_RANGE = 650;   // ...plus up to this much, at random
   var FLICKER = 0.35;       // chance per frame that a flickering cell changes
@@ -403,8 +403,12 @@
     box.addEventListener("touchstart", function (e) {
       dragging = e.touches.length === 1 && !!e.target.closest("pre, .ascii-live-wrap");
       last = null; // don't carry the speed over from a previous drag
-      if (dragging) onPointer(e.touches[0], true);
-    }, { passive: true });
+      if (!dragging) return;
+      // Cancel here too: some browsers commit to scrolling (or the top-of-page
+      // bounce) before the first touchmove, which can no longer be cancelled
+      e.preventDefault();
+      onPointer(e.touches[0], true);
+    }, { passive: false });
     box.addEventListener("touchmove", function (e) {
       if (!dragging) return;
       e.preventDefault();
