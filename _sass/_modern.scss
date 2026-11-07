@@ -862,7 +862,8 @@ article a.steam-card {
         flex-wrap: wrap;
 
         img { width: 100%; }
-        .cta { width: 100%; justify-content: center; }
+        /* border-box: the button's padding stays inside the card */
+        .cta { width: 100%; box-sizing: border-box; justify-content: center; }
     }
 }
 
