@@ -42,5 +42,5 @@ credits:
 		<span class="steam-card-title"><i class="fa-brands fa-steam" aria-hidden="true"></i> KIDDO on Steam</span>
 		<span class="steam-card-status">Demo available now</span>
 	</span>
-	<span class="cta">Download the demo</span>
+	<span class="cta">Play on Steam</span>
 </a>
