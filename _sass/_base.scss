@@ -83,9 +83,20 @@ hr{
 
 
 /**
+ * Media never widens the page, whatever else styles it
+ */
+img, video {
+    max-width: 100%;
+}
+
+/**
  * Figures
  */
 figure > img {
+    display: block;
+}
+
+figure > video {
     display: block;
 }
 
