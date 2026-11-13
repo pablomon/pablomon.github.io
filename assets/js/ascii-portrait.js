@@ -402,6 +402,13 @@
     // effect and never scrolls the page. CSS touch-action alone isn't enough
     // on every mobile browser, and a scroll would cancel the pointer events.
     var dragging = false;
+    var judged = false; // a touchstart already decided about this gesture
+    // Every gesture on the page counts as judged, including the ones that
+    // start elsewhere and only scroll past the portrait: those must keep
+    // scrolling. Capture, so it runs before the handler below.
+    document.addEventListener("touchstart", function () {
+      judged = true;
+    }, { passive: true, capture: true });
     box.addEventListener("touchstart", function (e) {
       dragging = e.touches.length === 1 && !!e.target.closest("pre, .ascii-live-wrap");
       last = null; // don't carry the speed over from a previous drag
@@ -412,12 +419,24 @@
       onPointer(e.touches[0], true);
     }, { passive: false });
     box.addEventListener("touchmove", function (e) {
+      // A drag can also start here: Safari sometimes swallows the
+      // touchstart (it may begin as a system gesture, or on a target
+      // that is gone by the time it fires), so check the finger's
+      // current position instead of trusting touchstart alone.
+      if (!dragging && !judged && e.touches.length === 1) {
+        var t = e.touches[0];
+        var under = document.elementFromPoint(t.clientX, t.clientY);
+        if (under && under.closest("pre, .ascii-live-wrap")) {
+          dragging = true;
+          last = null;
+        }
+      }
       if (!dragging) return;
       e.preventDefault();
       onPointer(e.touches[0], true);
     }, { passive: false });
-    box.addEventListener("touchend", function () { dragging = false; });
-    box.addEventListener("touchcancel", function () { dragging = false; });
+    box.addEventListener("touchend", function () { dragging = false; judged = false; });
+    box.addEventListener("touchcancel", function () { dragging = false; judged = false; });
   }
 
   current = null;

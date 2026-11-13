@@ -669,7 +669,11 @@ article a.cta,
     text-align: left;
     white-space: pre;
     overflow: visible;
+    /* Safari needs the prefix before 16.4; without it a finger drag
+       starts selecting text and iOS cancels the touch */
+    -webkit-user-select: none;
     user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .ascii-portrait-dark {
