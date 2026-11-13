@@ -7,7 +7,9 @@ accent: "#ae6ef7"  # neon colour for the games grid, taken from the cover
 genre: Point & click adventure
 status: Demo released
 hero: /img/kiddo/capsule.jpg  # capsule art, from the YouTube trailer thumbnail
-website: https://kiddothegame.com
+play: https://store.steampowered.com/app/1665910/KIDDO/
+play_label: Play the demo on Steam
+play_icon: fa-brands fa-steam
 credits:
   - role: Art
     name: Israel Paez
@@ -38,7 +40,7 @@ credits:
 	<img src="{{ site.baseurl }}/img/kiddo/capsule.jpg" alt="" loading="lazy"/>
 	<span class="steam-card-text">
 		<span class="steam-card-title"><i class="fa-brands fa-steam" aria-hidden="true"></i> KIDDO on Steam</span>
-		<span class="steam-card-status">Coming in 2027</span>
+		<span class="steam-card-status">Demo available now</span>
 	</span>
-	<span class="cta">Wishlist on Steam</span>
+	<span class="cta">Download the demo</span>
 </a>

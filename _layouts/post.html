@@ -17,7 +17,7 @@ layout: default
     {% endif %}
     {% if page.play or page.website %}
     <p class="project-actions">
-      {% if page.play %}<a class="cta" href="{{ page.play | relative_url }}" target="_blank" rel="noopener"><i class="fa-solid fa-play" aria-hidden="true"></i> Play in browser</a>{% endif %}
+      {% if page.play %}{% assign play_url = page.play %}{% unless play_url contains "://" %}{% assign play_url = play_url | relative_url %}{% endunless %}<a class="cta" href="{{ play_url }}" target="_blank" rel="noopener"><i class="{{ page.play_icon | default: "fa-solid fa-play" }}" aria-hidden="true"></i> {{ page.play_label | default: "Play in browser" }}</a>{% endif %}
       {% if page.website %}<a class="cta{% if page.play %} cta-secondary{% endif %}" href="{{ page.website }}" target="_blank" rel="noopener">Official website <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>{% endif %}
     </p>
     {% endif %}
