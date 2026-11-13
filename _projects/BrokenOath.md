@@ -7,9 +7,11 @@ img: /img/broken-oath/bo-project.png
 accent: "#f55247"  # neon colour for the games grid, taken from the cover
 genre: Hack and slash
 tagline: Slash your enemies, evade and parry their attacks through the arenas until the gods are finally done with you.
-hero: /img/broken-oath/evade.gif
+hero: /img/broken-oath/boss.mp4
+hero_caption: Outside the temple
+play: /webgl/broken-oath/index.html
 credits:
-  - role: Co-developer
+  - role: Game systems
     name: Eduardo Herrero
     url: https://cvanderbilt.github.io/CV/1.html
   - role: Intro art
@@ -29,19 +31,16 @@ credits:
 </figure>
 
 <div class="prose">
-	<p>The game has the following parts:</p>
-	<ul class="feature-list">
-		<li>An intro made of slides (images made with AI)</li>
-		<li>A map showing which level you are on</li>
-		<li>Five levels</li>
-		<li>Two arenas</li>
-		<li>Four enemy types</li>
-		<li>A boss!</li>
-		<li>An outro</li>
-	</ul>
+	<p>You chain combos with your sword, roll out of trouble, and block or parry to boost your next attack.</p>
+	<p>It's got a proper intro and outro, a map, seven levels, three fight arenas, four enemy types ready to go for you, and a boss waiting at the end.</p>
 </div>
 
 <figure>
-	<img src="{{ site.baseurl }}/img/broken-oath/die.gif" alt="Combat gameplay"/>
-	<figcaption>Gameplay</figcaption>
+	<img src="{{ site.baseurl }}/img/broken-oath/sanctum.jpg" alt="The hall of the gods"/>
+	<figcaption>Before the gods</figcaption>
+</figure>
+
+<figure>
+	<video src="{{ site.baseurl }}/img/broken-oath/night-arena.mp4" autoplay loop muted playsinline preload="metadata" aria-label="The night arena"></video>
+	<figcaption>The night arena</figcaption>
 </figure>

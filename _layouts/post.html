@@ -24,7 +24,14 @@ layout: default
   </header>
 
   {% if page.hero %}
-  <img class="project-hero" src="{{ page.hero | relative_url }}" alt="{{ page.title }}"/>
+  {% assign hero_ext = page.hero | split: "." | last | downcase %}
+  {% if page.hero_caption %}<figure class="project-hero-figure">{% endif %}
+  {% if hero_ext == "mp4" or hero_ext == "webm" %}
+  <video class="project-hero" src="{{ page.hero | relative_url }}" autoplay loop muted playsinline preload="metadata" aria-label="{{ page.hero_caption | default: page.title }}"></video>
+  {% else %}
+  <img class="project-hero" src="{{ page.hero | relative_url }}" alt="{{ page.hero_caption | default: page.title }}"/>
+  {% endif %}
+  {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption></figure>{% endif %}
   {% endif %}
 
   <article class="post-content">

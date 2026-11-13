@@ -380,11 +380,20 @@ $type-step: 20ms; /* per letter of the card title */
         margin: 0 0 24px;
     }
 
-    figure img {
+    figure img,
+    figure video {
         display: block;
         width: 100%;
         height: auto;
         box-shadow: var(--shadow);
+    }
+
+    .project-hero-figure {
+        margin: 0 0 48px;
+    }
+
+    .project-hero-figure .project-hero {
+        margin-bottom: 0;
     }
 
     figcaption {
